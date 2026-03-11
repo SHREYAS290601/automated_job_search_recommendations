@@ -1,0 +1,286 @@
+\documentclass[10pt]{article}
+\fontsize{6}{6.5}\selectfont
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=black, citecolor=black]{hyperref}
+\usepackage{titlesec}
+
+\geometry{a4paper, margin=0.25in}
+\usepackage{enumitem}
+% \renewcommand{\rmdefault}{phv}
+% \renewcommand{\sfdefault}{phv}
+\titleformat{\section}{\normalfont\Large\bfseries}
+{\thesection}{1em}{}[\vspace{-15pt}]
+\titlespacing{\section}{0pt}{\dimexpr\topsep-20pt + 1em}{\dimexpr\topsep-1pt }
+
+\hypersetup{
+    pdftitle={Resume of Shreyas Kulkarni},
+    pdfauthor={Shreyas Kulkarni},
+    pdfsubject={Resume for Data Science and Analytics role},
+    pdfkeywords={Shreyas Kulkarni, resume, computational science, front-end engineering, LLM, AI, ML, research},
+    pdfproducer={LaTeX with hyperref package},
+    pdfcreator={pdflatex}
+}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\begin{document}
+\begin{center}
+\textbf{\Large Shreyas Sachin Kulkarni}
+\end{center}
+% 1000 High Road, Tallahassee, FL 32304 \quad $\bullet$ \quad
+\begin{center}
+\small
+\href{tel:+12178666174}{(217) 866-6174} $\bullet$
+\href{mailto:ssk16@illinois.edu}{ssk16@illinois.edu} $\bullet$
+\href{https://www.linkedin.com/in/shreyaskulkarni29/}{LinkedIn} $\bullet$
+\href{https://portfolio-shreyas-kulkarni.netlify.app/}{Portfolio}
+\end{center}
+
+\section*{Education}
+\noindent
+\rule{\textwidth}{0.4pt}
+\textbf{University of Illinois Urbana-Champaign } \hfill Champaign, IL \\
+\textbf{{M. S. in Information Science | \emph{3.96 GPA}}} \hfill August 2024 - June 2026\\[4pt]
+\noindent
+\textbf{Savitribai Phule Pune University} - \textit{Former University of Pune} \hfill  Pune, MH \\
+\textbf{{Bachelor of Engineering, Computer Enngineering(minors Data Science)| \emph{3.86 GPA}}} \hfill August 2019 - July 2023\\
+
+\section*{Skills}
+\noindent % This prevents indentation in the current paragraph
+\rule{\textwidth}{0.4pt}
+\textbf{Tools \& BI:} PowerBI, Tableau, SAP Business Objects, MS Excel, Linux, Git, MongoDB, VSCode. \\
+\textbf{Frameworks/Libraries:} Pyspark, Numpy, Pandas, Scikit-Learn, Tensorflow, PyTorch, Folium, Xarrays, Geopandas \\
+% \textbf{Generative AI \& LLMs:} Agentic Workflows (LangGraph), Prompt Engineering (Context/Memory Management), RAG Pipelines, Tool Calling/Function Calling, Embeddings (OpenAI, Qwen), Vector Databases\\
+% \textbf{Analysis \& Stats:} Pandas, Numpy, Scikit-Learn, A/B Testing, Probability Theory, Exploratory Data Analysis (EDA) \\
+\textbf{Languages:} Python (Advanced Scripting, Pydantic), SQL, R, Javascript, MQL, Regex, Bigquery ML\\
+% \textbf{AI \& Agent Engineering:} LangChain, LangGraph, Langsmith, RAG, LLMs (GPT-4, Qwen, Llama-2/3/4), Vector Databases (Vectara, PGVector), Agentic Workflows, Prompt Driven Development (PDD), OpenAI Agents, Cursor, GitHub Copilot, VSCode\\
+\textbf{AI \& Agent Engineering:} LangChain, LangGraph (Agentic Workflows), RAG, LLMs (GPT-4, Claude, Llama), Vector Databases (PGVector, Vectara), Prompt Engineering \\
+% \textbf{Generative AI \& NLP:}Fine-tuning (LoRA/QLoRA), Embeddings, Agentic Workflows\\
+\textbf{ML \& Deep Learning:} YOLO (Computer Vision), Transfer Learning, Pix2Pix (GANs), XGBoost, Random Forest\\
+\textbf{Data Engineering \& Cloud:} Python, Docker, Kubernetes, ETL Pipelines, Snowflake, Databricks, Prefect\\
+% \textbf{Advance Modeling \& ML}: Classification/Regression Analysis, Model Optimization, Forecasting, Predictive Modeling \\
+% \textbf{Ml \& AI: } AI Evaluation, Agentic Workdlows, Synthetic data generation, A/B Testing, Model Optimization\\
+% \textbf{Web Technologies:} HTML, CSS, REST APIs, JSON \\
+% \textbf{Cloud / Infra:} AWS, GCP(Gemini Enterprise, Vetex AI), Azure, Docker, Kubernetes(K8), Mlflow, CI/CD pipelines
+\textbf{Cloud \& DevOps:} Azure, AWS(SageMaker, Bedrock, S3, RDS, EC2), GCP(Vertex AI, Gemini Enterprise), MLflow
+\vspace{5pt}
+
+\noindent
+\section*{Professional Experience}
+\noindent % This prevents indentation in the current paragraph
+\rule{\textwidth}{0.4pt}
+\textbf{Data Science Research Services(DSRS) University of Illinois} \hfill July 2025 - Present \\
+\textbf{\underline{AI Engineering Intern}}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    % \item Researched on embedding models like \textbf{Qwen-3, Gemma-3, Jina} and OpenAI Embedding API for RAG based systems
+    % \item Developed robust data extraction programs for large-scale document ingestion, utilizing Pydantic for strict validation and reducing processing latency by 30\% via asynchronous multiprocessing pipelines.
+    % \item Architected a multi-agent orchestration layer (Agentic RAG) using LangGraph decision trees, achieving 95\% retrieval accuracy by evaluating routing logic against production-grade requirements
+    % \item Conducted statistical A/B tests on retrieval strategies by comparing custom scoring Hybrid search, Reciprocal Rank and Query decomposition, enhancing system retrieval Precision and MRR by 50\%
+    \item Designed and executed robust statistical A/B tests on retrieval strategies, evaluating classification metrics including precision and Mean Reciprocal Rank (MRR) to optimize generative AI models for enterprise recommendation engines
+    \item Designed and deployed scalable Retrieval Augmented Generation (RAG) systems utilizing Qwen3-32B within LangGraph and LangChain frameworks, establishing enterprise-grade AI capabilities
+    \item Architected advanced data engineering workflows to ingest 1,000+ documents under 15s into vector databases; maintained and deployed generative AI models (Qwen3, GPT) using Python and LangGraph, managing the end-to-end model lifecycle to ensure high availability and performance
+    % Created interactive Tableau dashboards to visualize 8,700+ operational events, translating complex data into actionable insights for strategic decision-making
+    % % \item Developed automated data extraction scripts using Python to ingest and validate 500+ daily tasks, reducing manual processing time by 30\% and ensuring data readiness for downstream market analysis
+    
+    % \item Built scalable ETL pipelines utilizing Pydantic for strict schema validation, ensuring ingestion rate of 100 documents/s, data quality and integrity for downstream analytics across complex, unstructured datasets.
+    % \item Designed and executed statistical A/B tests on retrieval strategies to optimize personalization algorithms, utilizing Python to interpret performance patterns and drive product strategy for internal recommendation engines
+    % \item Conducted comparative analysis and benchmarking of semantic versus overlap chunking algorithms, optimizing information retrieval precision for unstructured datasets
+    % \item Conducted comparative analysis on data processing methods to optimize information retrieval, utilizing statistical approaches to improve system accuracy and performance metrics
+    \item Pioneered a TensorFlow research framework for low-resolution disease detection, explored images through extensive EDA involving GLCM, FFT, Laplacian Variance and Sobel operators; used ConvNext, ResNet, and VGG16 with Grad-CAM to explain deep features, conducted mechanistic interpretation of deep features to improve model explainability
+    \item Engineered production-ready asynchronous $ETL$ pipelines to ingest $1,000+$ documents per $1.5s$ into $PGVector$, utilizing $Pydantic$ for schema validation to ensure $100\%$ data integrity for downstream analytics
+    % \item Engineered a high-throughput sinking strategy for creation of Knowledge-Base to process data sources from Github and Asana, reducing processing latency by 90\%
+    % \item Implemented AWS Bedrock for RAG evaluation and managed PostgreSQL (RDS) vector storage to support large-scale data transformation and retrieval tasks
+    % \item Optimized vector retrieval pipelines through semantic chunking strategies, directly enhancing LLM inference quality and reducing context window costs for internal recommendation engines
+    % \item Engineered high-throughput data collection and preprocessing pipelines using Python and Multiprocessing, reducing ingestion time by 30\% for 500+ tasks; implemented schema validation to ensure compliance with quality controls using Pydantic to ensure schema integrity in MongoDB
+    % \item Engineered scalable ETL pipelines for unstructured data using Python and Pydantic; reduced ingestion time by 30\% via asynchronous multiprocessing, ensuring rapid data availability for business intelligence initiatives
+    % \item Implemented rigorous Pydantic schema validation within scalable ETL pipelines ingesting more than 500 documents/10s, enforcing data integrity and mitigating downstream model risk for analytics engines
+    % \item Exploring GCP Agent Development Kit(ADK) web and CLI for retrieval and reasoning of RAG applications
+    % \item Architected AI-driven business solutions using LangGraph and Qwen-32B, integrating Large Language Models (LLMs) to streamline information retrieval and decision-making processes
+    % \item Built real-time reporting dashboards for compliance workflows, reducing data availability latency to 1.5s and enabling stakeholders to make rapid, data-driven decisions
+
+\end{itemize}
+\textbf{Apptware Pvt. Ltd., Pune} \hfill April 2023 - June 2024 \\
+\textbf{\underline{Associate Data Scientist}}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    \item Developed PyTorch-based Deep Learning models (Pix2Pix) on 17,000+ medical images (CT/MRI), ensuring strict adherence to data privacy standards while reducing diagnostic latency for healthcare partners
+    \item Developed and evaluated predictive machine learning models using XGBoost to extract actionable insights from complex, high-dimensional datasets, translating statistical insights into actionable business implications for key stakeholders
+    % optimized model inference latency by 80\% (1s to 200ms) to ensure real-time performance in production
+    \item Applied AI, Machine Learning, and Python to automate large-scale data analysis, reducing manual processing time by 90\% and partnering with cross-functional stakeholders to deliver SEO optimization reports for 20+ clients
+    \item Integrated and transformed complex data into reliable, analytics-ready datasets by engineering robust SQL pipelines to process over 470,000 records, deploying interactive dashboards to clearly communicate technical findings to non-technical stakeholders
+    % \item Owned the end-to-end delivery of YOLO object detection systems, managing the full lifecycle from problem framing and annotation to production deployment on edge devices
+    \item Optimized mission-critical inference pipelines, reducing latency by 80\% (1s to 200ms) to ensure real-time performance for high-volume IVR production environments
+    % \item Implemented efficient fine-tuning techniques (QLoRA/LoRA) on Falcon-7B and Llama models, optimizing GPU resource usage and quantization to deliver high-performance custom chatbots
+    % \item Managed end-to-end model development lifecycles for YOLO object detection, overseeing the annotation and validation of 18,000+ images to ensure robust performance on edge devices
+
+\end{itemize}
+% \rule{\textwidth}{0.4pt}
+\textbf{Apptware Pvt. Ltd., Pune} \hfill September 2022 - April 2023 \\
+\textbf{\underline{Data Science Intern}}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    % \item Worked on the healthcare system named Actic AI, developed the dashboards for multiple levels of users using ReactJS, and created custom hooks to process data and create PDFs while optimizing the pages' loading times. 
+    % \item Created custom chatbots for a marketing platform using fine-tuned Falcon-7B and Llama models (LoRA/QLoRA quantization), improving query resolution over 2,000 QnA instances
+     % \item Delivered a Chatbot UI with Chainlit and LangChain, integrating GPT-4 API and SQL to trigger 20+ user-defined functions for automated tool calling
+    % \item Model Fine-Tuning: Fine-tuned open-source LLMs (Falcon-7B, Llama-2) using QLoRA quantization to create custom conversational agents, optimizing prompts and chains to improve query resolution effectiveness
+    \item Extracted insights from unstructured data and technical documents using Azure Computer Vision OCR, reducing data processing latency by 40\% and accelerating enterprise analytics workflows
+    \item Fine-tuned Large Language Models (Falcon-7B, LLaMA) using LoRA \& QLoRA techniques; optimized inference pipelines for NLP solutions, demonstrating capability to scale post-training workflows
+    % \item Engineered a hybrid NLP pipeline using LDA for unsupervised document clustering and Llama for semantic interpretation; implemented few-shot classification to map latent topics to specific client-defined keywords and generate concise summaries, transforming unstructured insurance text into actionable insights
+
+\end{itemize}
+
+% {Delivered presentation for the aforementioned research paper.}
+% \vspace{5pt}
+
+
+% \emph{Object Following Robot Based on AI/ML} - \\
+
+ 
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Implemented object tracking on a robot using machine learning and computer vision.
+%     \item Designed a trainable program for object following with adaptable preferences.
+%     \item Engineered a Python-based function for autonomous robot motion.
+%     \item \url{https://www.sciencedirect.com/science/article/pii/S2214785322064185}
+% \end{itemize}
+% \emph{Transcription and translation of videos using fine-tuned XLSR Wav2Vec2 on custom dataset and mBART} - \\
+% \href{https://arxiv.org/abs/2403.00212}{Transcription and translation of videos using fine-tuned XLSR Wav2Vec2 on custom dataset and mBART} \\
+% \emph{End-to-end Hindi to English speech conversion using Bark, mBART and a finetuned XLSR Wav2Vec2} - \\
+% \href{https://arxiv.org/abs/2401.06183}{End-to-end Hindi to English speech conversion using Bark, mBART, and a finetuned XLSR Wav2Vec2} \\
+% \emph{Custom Data Augmentation for low resource ASR using Bark and Retrieval-Based Voice Conversion} - \\
+% \href{https://arxiv.org/abs/2311.14836}{Custom Data Augmentation for low resource ASR using Bark and Retrieval-Based Voice Conversion}
+
+% \begin{multicols}{2}
+% \noindent
+% \textbf{Frameworks:} LangChain, Llama-index, Numpy, Pandas, ReactJS \\
+% \textbf{Programming Languages:} C/C++, TypeScript/JavaScript, Python, SQL, GLSL. \\
+% \textbf{Unit Testing:} Jest, Cypress, pytest. \\
+% \textbf{Cloud / DevOps:} Jenkins, Docker, Terraform, Slurm \\
+% \textbf{Project Management:} Agile Methodology, JIRA, Linear, Trello, CI/CD Pipelines. \\
+% \textbf{Developer Tools:} Visual Studio Code, Jupyter Notebook, Git, GitHub, Linting. \\
+% \end{multicols}
+\vspace{5pt}
+\section*{Projects}
+\noindent % This prevents indentation in the current paragraph
+\rule{\textwidth}{0.4pt}
+
+% \noindent
+% \textbf{Bio-Sensor Data Analysis: Building an Exercise Classifier based on a Fitness Tracker} | 
+% \emph{University of Pune}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Built a predictive health-metrics pipeline for wearable sensor data, utilizing Random Forest to model patient activity patterns with 98\% accuracy, directly applicable to anticipating patient wellness needs
+% \end{itemize}
+
+% \noindent
+% \textbf{Bioactivity Prediction for Acetylcholinesterase} | 
+% \emph{University of Pune}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Engineered a pIC50 regression pipeline using 800+ Padel descriptors and Lipinski features from ChEMBL data, achieving an $R^2$ of 0.74 with Random Forest to accelerate inhibitor discovery
+% \end{itemize}
+
+% \noindent
+% \textbf{\href{https://uillinoisedu-my.sharepoint.com/:v:/g/personal/ssk16_illinois_edu/EVE67EhvNTpAnSdbgeNSJToBc4SWbXO3mm_ne-0R6dfyyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ijlWhb}{Football Video analytics with Custom tracking system}} |
+% \emph{Independent Study Project}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Engineered an end-to-end automated insurance claim audit pipeline on Azure Databricks using a Medallion Architecture and Xception-based CV model (94\% accuracy), optimizing for 4GB compute constraints via Hive Metastore and MLflow
+
+% \end{itemize}
+\noindent
+\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7429979052737974272/?originTrackingId=XCjPlyi3K9LDlPz/y67LDQ\%3D\%3D}{Automated insurance claim audit pipeline}} | 
+\emph{University of Illinois}
+\vspace{-5pt}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    \item Engineered an end-to-end automated insurance claim audit pipeline on Azure Databricks using a Medallion Architecture and Xception-based CV model (94\% accuracy), optimizing for 4GB compute constraints via Hive Metastore and MLflow
+\end{itemize}
+
+\noindent
+\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7432941417351757825/?originTrackingId=CoH1QgnwmzoYsWrosFZCZQ\%3D\%3D}{Multi-Insurance-Agent-System}} | 
+\emph{University of Illinois}
+\vspace{-5pt}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    \item Designed and deployed a 6-agent LangGraph architecture that leverages OpenAI function calling and SCAN structural constraints, achieving higher efficiency and lower latency compared to standard keyword-search RAG implementations
+\end{itemize}
+
+% \noindent
+% \textbf{\href{https://mlc-group-10-fake-review-fcdvhfjcuvyogqtsa8cd3y.streamlit.app/}{Fake Review Detection Pipeline | AWS SageMaker, Bi-LSTM, Electra}} | 
+% \emph{University of Illinois}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Designed a hybrid forensic pipeline on AWS SageMaker using Boto3 and S3 for artifact management, engineering 129 statistical features via Python (Pandas/NumPy) and Word2Vec to feed a Bi-LSTM network for scalable fake review detection
+% \end{itemize}
+
+% \noindent
+% \textbf{\href{https://uillinoisedu-my.sharepoint.com/:v:/g/personal/ssk16_illinois_edu/EVE67EhvNTpAnSdbgeNSJToBc4SWbXO3mm_ne-0R6dfyyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ijlWhb}{Football Video analytics with Custom tracking system}} |
+% \emph{Independent Study Project}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Modeled DeepSORT object detection to track players, referees, and ball with 15,000+ unstructured images. Engineered optimization methods and applied K-means clustering for persistent entity identification in complex video data, applying core statistics to extract real-time tracking metrics
+%     % \item Constructed a Raspberry Pi-powered rover with diverse electronic components and sensors.
+%     % \item Engineered a user interface for the robot using JavaScript, HTML, and CSS.
+%     % \item Utilized SocketIO and Flask for real-time communication and deployed the program on Heroku for remote monitoring.
+% \end{itemize}
+
+% \noindent
+% \textbf{\href{https://github.com/SHREYAS290601/Heart-Health-BE-PROJECT}{Prognosis of Cardiovascular diseases using chest radiographs}} | \emph{University of Pune}
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=-3pt]
+%     \item Piloted 4 YOLO models (V5 to V8) for \textbf{multi-class detection} of 14 lung and heart diseases, trained on \textbf{200 GB} DICOM files, and coded a FastAPI backend integrated with React for real-time disease inference and doctor recommendations.
+% \end{itemize}
+% \noindent
+% \textbf{Football Data engineering project} |  
+% \emph{Independent Project} 
+% \vspace{-5pt}
+% \begin{itemize}[left=0pt, itemsep=0pt]
+%     \item Developed an end-to-end \textbf{Apache Airflow} and \textbf{PySpark} pipeline to extract, clean, and transform data of 2,000 football stadiums from Wikipedia, stored it in Azure Data Lake, integrated it with Azure Data Factory and Synapse for querying, and created PowerBI dashboards 
+% \end{itemize}
+
+
+
+
+% \vspace{5pt}
+% \noindent
+% \section*{Publications}
+% \noindent % This prevents indentation in the current paragraph
+% \rule{\textwidth}{0.4pt}
+% \begin{itemize}[left=0pt, itemsep=-3pt]
+%     \item
+%     \text{ISRJ}: \href{http://dx.doi.org/10.32628/CSEIT2390216}{A Review on Automatic Person Attribute Information Extraction and Disambiguation from Unstructured text, 2023} 
+% \end{itemize}
+
+% \section*{Certifications}
+% \noindent\rule{\textwidth}{0.4pt}
+%     Deep Learning for Healthcare(Specialization) - Ongoing; \href{https://www.coursera.org/account/accomplishments/verify/ORQIWJWG1IRA}{Introduction to Business Analytics with R}; \href{https://www.udemy.com/certificate/UC-50d44a3d-bad9-4bce-bd02-c959d5dc3ce4/}{ML, Data Science and DL with Python};  \href{https://www.coursera.org/account/accomplishments/verify/J1QI9HCFN7ZY}{ML Algorithms with R in \textbf{Business Analytics}}; \href{https://www.credly.com/badges/6bfd2fb7-d4a1-4b24-a861-a7c74df37c89/public_url}{Microsoft Certified-\textbf{Azure AI Fundamentals}}
+
+
+% \emph{Complete React Developer in 2022 (w/ Redux, Hooks, GraphQL)} \\
+% \url{https://www.udemy.com/certificate/UC-c97b9ba4-1db1-471c-9bdd-4dc5fe565f8b/} 
+
+
+% \section*{Skills}
+
+% \begin{itemize}[leftmargin=0.2in]
+%     \item \textbf{Languages and Frameworks}: Python, C++, SQL, HTML, Java, Javascript, R, SAS, TensorFlow, PyTorch, OpenCV, Flask
+%     \item \textbf{Concepts}: Computer Science, Data Science, Data Analysis, LLM’s, Machine Learning, NLP, Computer Vision, Quantitative Methods, Data Structures and Algorithms, Containerization, Image Processing, Model Training, A/B Testing.
+%     \item \textbf{Tools and Libraries}: Git, Javascript, AWS, Docker, Kubernetes, Selenium, ELK Stack, Spark, Hadoop, Docker, Tableau, Jupyter Notebook, Pandas, NumPy, Matplotlib, HuggingFace, Numpy, Scipy, XGBoost, ScikitLearn, Linux
+% \end{itemize}
+
+% \section*{Publications}
+
+% \textbf{Efficient Fruit Grading System Using Spectrophotometry and Machine Learning} \hfill \textit{May 2020 - Jul. 2021} \\
+% \begin{itemize}[leftmargin=0.2in]
+%     \item Created a custom data set using a low-cost spectrophotometry sensor and developed a predictive model that grades apples with 72\% accuracy, resulting in 24 citations. Published in IEEE Sensors Journal - I.F. 4.6.
+% \end{itemize}
+
+% \section*{Achievements and Extra Activities}
+
+% \begin{itemize}[leftmargin=0.2in]
+%     \item \textbf{Kaggle Expert - Notebooks} \hfill \textit{May 2022 - Nov. 2022}
+%     \item \textbf{Gold Medalist \& Scholarship - Thapar University, Patiala} \hfill \textit{Feb. 2019 - Feb. 2020}
+% \end{itemize}
+
+\end{document}

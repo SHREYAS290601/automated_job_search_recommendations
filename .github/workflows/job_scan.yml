@@ -1,0 +1,49 @@
+name: Scan New Grad Jobs
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+
+jobs:
+  scan-jobs:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # allow committing updated data files back to the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run job scanner
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+        run: |
+          python -c "from jobs_pipeline import run_job_scan; run_job_scan()"
+
+      - name: Commit updated data files (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/seen_jobs.json data/job_results.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update scanned job data [skip ci]" || true
+            git push
+          fi
+

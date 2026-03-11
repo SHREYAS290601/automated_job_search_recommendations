@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local env / secrets
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Airflow (local)
+airflow.db
+airflow.log
+airflow_logs/
+
+# Streamlit (local state)
+.streamlit/
+
+# Docker / build artifacts
+*.egg-info/
+dist/
+build/
+
+# Node / frontend (if added later)
+node_modules/
+
+# Local screenshots / assets
+assets/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv

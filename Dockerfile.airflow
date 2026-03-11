@@ -1,0 +1,23 @@
+FROM apache/airflow:2.9.1-python3.12
+
+# Disable example DAGs
+ENV AIRFLOW__CORE__LOAD_EXAMPLES=False
+
+# Use Airflow's home directory (writeable) for the project
+ENV AIRFLOW_HOME=/opt/airflow
+ENV PROJECT_DIR=${AIRFLOW_HOME}/reality-check-ats
+WORKDIR ${PROJECT_DIR}
+
+# Copy project into container (DAG + code + templates + links)
+COPY . ${PROJECT_DIR}
+
+# Install any extra Python dependencies your project needs
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir streamlit PyMuPDF python-dotenv openai requests pydantic
+
+# Tell Airflow where to find DAGs (we copy airflow_dag.py already)
+ENV AIRFLOW__CORE__DAGS_FOLDER=${PROJECT_DIR}
+
+# Simple standalone Airflow: init DB and start scheduler+webserver
+CMD bash -c "airflow db upgrade && airflow standalone"
+
