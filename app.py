@@ -543,10 +543,23 @@ def main() -> None:
     # Resolve template paths once before any page render
     templates_dir = _get_templates_dir()
     if "template_checks" not in st.session_state:
+        # Handle case differences between macOS (case-insensitive) and Linux (case-sensitive)
+        portfolio_path = templates_dir / "portfolio.pdf"
+        if not portfolio_path.is_file():
+            alt_portfolio = templates_dir / "Portfolio.pdf"
+            if alt_portfolio.is_file():
+                portfolio_path = alt_portfolio
+
+        resume_tex_path = templates_dir / "resume.tex"
+        if not resume_tex_path.is_file():
+            alt_resume = templates_dir / "Resume.tex"
+            if alt_resume.is_file():
+                resume_tex_path = alt_resume
+
         st.session_state["template_checks"] = {
             "cover_letter": templates_dir / "cover_letter.txt",
-            "portfolio": templates_dir / "portfolio.pdf",
-            "resume_tex": templates_dir / "resume.tex",
+            "portfolio": portfolio_path,
+            "resume_tex": resume_tex_path,
             "resume_pdf": templates_dir / "resume.pdf",
         }
 
