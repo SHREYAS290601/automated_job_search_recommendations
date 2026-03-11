@@ -219,17 +219,19 @@ def _extract_text_from_response(response) -> str:
     return "\n".join(parts) if parts else ""
 
 
-def _fetch_jd_text(url: str) -> str | None:
-    """Fetch a job description page and return plain text, or None on failure."""
+def _fetch_jd(url: str) -> tuple[str | None, str | None]:
+    """Fetch a job description page and return (plain text, page title), or (None, None) on failure."""
     try:
         resp = requests.get(url, timeout=15)
         if resp.status_code != 200:
-            return None
+            return None, None
         soup = BeautifulSoup(resp.text, "html.parser")
+        title = soup.title.string.strip() if soup.title and soup.title.string else None
         text = soup.get_text(separator="\n")
-        return text.strip() or None
+        text = text.strip() or None
+        return text, title
     except Exception:
-        return None
+        return None, None
 
 
 def _ensure_noindent_before_roles(latex: str) -> str:
@@ -988,7 +990,7 @@ def main() -> None:
                                 "Please add them and try again."
                             )
                         else:
-                            jd_text = _fetch_jd_text(job.url)
+                            jd_text, jd_title = _fetch_jd(job.url)
                             if not jd_text:
                                 st.error("Could not fetch or parse the job description for this posting.")
                             else:
@@ -1023,6 +1025,8 @@ def main() -> None:
                                     results[job_key] = {
                                         "latex": latex_experience,
                                         "cover_letter": cover_letter_text,
+                                        "jd_text": jd_text,
+                                        "jd_title": jd_title,
                                     }
 
                     job_result = results.get(job_key)
@@ -1089,6 +1093,19 @@ def main() -> None:
                             file_name=f"cover_letter_job_{idx}.txt",
                             mime="text/plain",
                             key=f"job_scanner_cover_letter_dl_{idx}",
+                        )
+
+                    if job_result and job_result.get("jd_text"):
+                        st.markdown("**Job description (from posting)**")
+                        jd_snippet = job_result["jd_text"]
+                        # Show a trimmed version to keep UI compact
+                        if len(jd_snippet) > 4000:
+                            jd_snippet = jd_snippet[:4000] + "\n...[truncated]..."
+                        st.text_area(
+                            "Job description",
+                            value=jd_snippet,
+                            height=220,
+                            key=f"job_scanner_jd_area_{idx}",
                         )
 
     elif page == "Cover Letter":
