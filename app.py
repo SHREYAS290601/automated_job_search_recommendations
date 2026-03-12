@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from pydantic import BaseModel
 
-from jobs_pipeline import load_latest_results, run_job_scan
+from jobs_pipeline import get_job_posting_url, load_latest_results, load_latest_results_mixed, run_job_scan
 
 
 load_dotenv()
@@ -75,11 +75,14 @@ def _resolve_template_path(filename: str) -> Path:
 
 COVER_LETTER_SYSTEM = (
     "You are an expert career coach. Your task is to write a tailored cover letter for a candidate applying to a "
-    "specific job. You are given: (1) the candidate's resume text, (2) the job description, and (3) a sample cover "
+    "specific job. The user message will start with 'TARGET JOB (you MUST use this company and role—no other):' "
+    "followed by one line (e.g. 'Data Scientist at Acme Corp'). You MUST use that exact company name and role for "
+    "the salutation (e.g. 'Dear Acme Corp Hiring Team') and throughout the letter. Never use a different company or "
+    "role. You are also given: (1) the candidate's resume text, (2) the full job description, and (3) a sample cover "
     "letter template. Generate a new cover letter that: preserves the structure, tone, and paragraph flow of the "
-    "template; fills in the correct company name, role title, and key requirements from the job description; and "
-    "weaves in concrete achievements and skills from the resume that match the JD. Write in first person as the "
-    "candidate. Output only the cover letter text—no headings, no meta-commentary."
+    "template; uses the company and role from the TARGET JOB line; and weaves in concrete achievements and skills "
+    "from the resume that match the JD. Write in first person as the candidate. Output only the cover letter text—"
+    "no headings, no meta-commentary."
 )
 
 
@@ -130,12 +133,29 @@ def get_relevance_metric(resume_text: str, job_description: str, model_name: str
     return score, explanation
 
 
+def _job_header_from_jd(job_description: str) -> str:
+    """First line or first 400 chars of JD—usually contains 'Role at Company' or 'Role, Company'. Use for targeting."""
+    jd = (job_description or "").strip()
+    if not jd:
+        return ""
+    first_line = jd.split("\n")[0].strip()
+    return first_line if len(first_line) <= 400 else first_line[:397] + "..."
+
+
 def get_cover_letter(resume_text: str, job_description: str, template: str, model_name: str) -> str:
     """Generate a tailored cover letter from resume, JD, and template."""
     if not template.strip():
         raise ValueError("Cover letter template is empty.")
+    job_header = _job_header_from_jd(job_description)
+    target_instruction = (
+        f"TARGET JOB (you MUST use this company and role—no other): {job_header}\n\n"
+        "The salutation must use the company name from the TARGET JOB line above (e.g. 'Dear [That Company] Hiring Team'). "
+        "The role and company mentioned in the letter body must also match the TARGET JOB line exactly.\n\n"
+    ) if job_header else ""
     user_content = (
-        "Generate a tailored cover letter using the following inputs.\n\n"
+        target_instruction
+        + "Generate a tailored cover letter using the following inputs. The company name and role title must come "
+        "ONLY from the TARGET JOB line above and the JOB DESCRIPTION below—never from any other source.\n\n"
         "=== RESUME ===\n"
         f"{resume_text}\n\n"
         "=== JOB DESCRIPTION ===\n"
@@ -219,17 +239,137 @@ def _extract_text_from_response(response) -> str:
     return "\n".join(parts) if parts else ""
 
 
+def _is_likely_marketing_page(text: str) -> bool:
+    """True if content looks like a company marketing/landing page, not a job description."""
+    if not text or len(text) < 500:
+        return False
+    lower = text.lower()
+    # Marketing page indicators (company homepage, product pitch)
+    if "get started" in lower and "learn more" in lower:
+        if lower.count("learn more") >= 2 or lower.count("get started") >= 2:
+            return True
+    if "unlock profit" in lower or "supply chain runs on" in lower:
+        return True
+    if "schedule a demo" in lower and "contact" in lower and "responsibilities" not in lower:
+        return True
+    # Job page indicators (if present, likely a JD)
+    if "responsibilities" in lower and ("qualification" in lower or "requirements" in lower):
+        return False
+    if "job description" in lower or "apply now" in lower:
+        return False
+    return False
+
+
+def _extract_jobright_jd(soup: BeautifulSoup) -> str | None:
+    """Extract JD from jobright.ai job page: from job title through Benefits, before Company section."""
+    for tag in soup.find_all(["script", "style", "nav", "footer", "noscript", "iframe"]):
+        tag.decompose()
+    # Jobright: look for section headings (Responsibilities, Qualification, Benefits) and take that block
+    parts = []
+    stop_headers = re.compile(r"^\s*(Company|H1B|Funding|Leadership|Recent News)\s*$", re.I)
+    for el in soup.find_all(["h1", "h2", "h3", "h4", "p", "li"]):
+        text = el.get_text(separator=" ", strip=True)
+        if not text or len(text) < 3:
+            continue
+        if el.name in ("h2", "h3", "h4") and stop_headers.match(text):
+            break
+        parts.append(text)
+    if parts:
+        jd = "\n\n".join(parts)
+        if len(jd) > 200:
+            return jd
+    return None
+
+
+def _extract_jd_from_soup(soup: BeautifulSoup, request_url: str = "") -> str | None:
+    """Traverse the page with bs4 and extract job description from the job posting link only."""
+    # Remove script, style, nav, footer to reduce noise
+    for tag in soup.find_all(["script", "style", "nav", "footer", "header", "noscript", "iframe"]):
+        tag.decompose()
+
+    # Jobright.ai: use structure-based extraction (job title → Responsibilities → Qualification → Benefits)
+    if "jobright.ai" in request_url and "/jobs/" in request_url:
+        jd = _extract_jobright_jd(soup)
+        if jd:
+            return jd
+
+    # Workday and other ATS: known selectors first
+    selectors = [
+        '[data-automation-id="jobPostingDescription"]',  # Workday
+        '[data-qa="job-description"]',
+        '.job-description',
+        '.job-description__content',
+        '.job-posting-description',
+        '[class*="JobDescription"]',
+        '[class*="job-description"]',
+        '[class*="jobDescription"]',
+        '[id*="job-description"]',
+        '[id*="jobDescription"]',
+        '.job-details',
+        '[data-cy="job-description"]',
+    ]
+    for sel in selectors:
+        try:
+            el = soup.select_one(sel)
+            if el:
+                text = el.get_text(separator="\n", strip=True)
+                if text and len(text) > 200 and not _is_likely_marketing_page(text):
+                    return text
+        except Exception:
+            continue
+    # Generic fallbacks (avoid main/article which often grab whole page including marketing)
+    for sel in ["main", "article", "[role='main']", ".content__body", ".description"]:
+        try:
+            el = soup.select_one(sel)
+            if el:
+                text = el.get_text(separator="\n", strip=True)
+                if text and len(text) > 300 and not _is_likely_marketing_page(text):
+                    return text
+        except Exception:
+            continue
+    body = soup.find("body")
+    if body:
+        text = body.get_text(separator="\n", strip=True)
+        if text and len(text) > 100 and not _is_likely_marketing_page(text):
+            return text
+    return None
+
+
 def _fetch_jd(url: str) -> tuple[str | None, str | None]:
-    """Fetch a job description page and return (plain text, page title), or (None, None) on failure."""
+    """
+    Fetch the job description from the exact job posting URL.
+    - Jobright (1st source): JD is at the Job Title column link (jobright.ai/jobs/info/...).
+    - Speedyapply (2nd source): JD is at the Posting column link (Apply button href).
+    Rejects content if we were redirected to a company homepage or page looks like marketing.
+    """
     try:
-        resp = requests.get(url, timeout=15)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        }
+        resp = requests.get(url, timeout=20, headers=headers, allow_redirects=True)
         if resp.status_code != 200:
             return None, None
+        # If we were redirected to a different host (e.g. company site), only use if content looks like a JD
+        from urllib.parse import urlparse
+        requested_host = urlparse(url).netloc.lower()
+        final_host = urlparse(resp.url).netloc.lower()
         soup = BeautifulSoup(resp.text, "html.parser")
-        title = soup.title.string.strip() if soup.title and soup.title.string else None
-        text = soup.get_text(separator="\n")
-        text = text.strip() or None
-        return text, title
+        title = None
+        if soup.title and soup.title.string:
+            title = soup.title.string.strip()
+        text = _extract_jd_from_soup(soup, request_url=url)
+        if not text:
+            text = soup.get_text(separator="\n", strip=True)
+        if text and len(text) < 100:
+            return None, title
+        # If redirected to different domain and content looks like marketing, reject
+        if requested_host != final_host and _is_likely_marketing_page(text):
+            return None, title
+        if text and _is_likely_marketing_page(text):
+            return None, title
+        return (text or None), title
     except Exception:
         return None, None
 
@@ -271,9 +411,26 @@ def _ensure_data_science_intern_three_bullets(
     third_text = ""
     bullets = re.findall(r"\\item\s+(.+?)(?=\\item|$)", block, re.DOTALL)
     two_text = "\n".join((b[:300].strip() for b in bullets[:2]))
+    # Provide a small slice of portfolio for grounding (avoid hallucinated metrics)
+    pt = (portfolio_text or "").strip()
+    pt_snip = pt[:2500]
+    if "Data Science Intern" in pt:
+        i = pt.rfind("Data Science Intern")
+        pt_snip = pt[max(0, i - 800) : i + 1700]
     prompt = (
-        "Two resume bullets for a Data Science Intern role. Write ONE more in the same XYZ style. "
-        "One line only. No \\item, no LaTeX.\n\nBullets:\n" + two_text + "\n\nJD:\n" + job_description[:1000]
+        "You are completing a Data Science Intern resume entry.\n"
+        "Write EXACTLY ONE additional bullet in the same tone and XYZ style.\n"
+        "HARD CONSTRAINTS:\n"
+        "- Do NOT invent any numbers, percentages, counts, latency, costs, model names, datasets, or metrics.\n"
+        "- You may ONLY reuse facts/metrics that already appear in the bullets below or in the PORTFOLIO SNIPPET.\n"
+        "- If you cannot find a metric to support the claim, write a qualitative bullet WITHOUT any numbers.\n"
+        "- One line only. No \\item, no LaTeX.\n\n"
+        "EXISTING BULLETS:\n"
+        + two_text
+        + "\n\nPORTFOLIO SNIPPET:\n"
+        + pt_snip
+        + "\n\nJOB DESCRIPTION (keywords only):\n"
+        + job_description[:800]
     )
     try:
         response = client.responses.create(
@@ -320,6 +477,154 @@ def _clean_latex_experience(latex: str) -> str:
     return text.strip()
 
 
+def _parse_golden_hand_rationale(rationale_block: str) -> dict:
+    """Parse the text before LATEX_EXPERIENCE into compatibility_rating, rationale, alterations."""
+    out: dict = {"compatibility_rating": "", "rationale": "", "alterations": "", "raw": rationale_block or ""}
+    if not (rationale_block or rationale_block.strip()):
+        return out
+    raw = rationale_block.strip()
+    # COMPATIBILITY_RATING: may be on same line or next line (e.g. "4.8 / 5.0 (High Likelihood of Callback)")
+    if "COMPATIBILITY_RATING:" in raw:
+        rest = raw.split("COMPATIBILITY_RATING:", 1)[1]
+        for line in rest.split("\n"):
+            line = line.strip()
+            # Skip empty, section headers, or junk like "**" (model markdown artifact)
+            if not line or line.startswith("RATIONALE:") or line.startswith("ALTERATIONS:"):
+                continue
+            if line.replace("*", "").strip() == "" or len(line.replace("*", "").strip()) < 4:
+                continue
+            # Should look like a rating: e.g. "4.8 / 5.0 (...)" — has a digit and usually /
+            if re.search(r"\d", line) and ("/" in line or "5" in line or "out of" in line.lower()):
+                out["compatibility_rating"] = line.replace("**", "").strip() or line
+                break
+            # Else accept if it's a substantial line (not just **)
+            if len(line) >= 6:
+                out["compatibility_rating"] = line.replace("**", "").strip() or line
+                break
+    # RATIONALE: ... (until ALTERATIONS: or XYZ_FORMAT_EXAMPLES:)
+    if "RATIONALE:" in raw:
+        rest = raw.split("RATIONALE:", 1)[1]
+        for sep in ["ALTERATIONS:", "XYZ_FORMAT_EXAMPLES:", "LATEX_EXPERIENCE:"]:
+            if sep in rest:
+                rest = rest.split(sep)[0]
+        out["rationale"] = rest.strip()
+    # ALTERATIONS: ... (until XYZ_FORMAT_EXAMPLES: or end)
+    if "ALTERATIONS:" in raw:
+        rest = raw.split("ALTERATIONS:", 1)[1]
+        if "XYZ_FORMAT_EXAMPLES:" in rest:
+            rest = rest.split("XYZ_FORMAT_EXAMPLES:")[0]
+        out["alterations"] = rest.strip()
+    return out
+
+
+def _clean_rationale_display(text: str) -> str:
+    """Remove stray markdown ** so rationale/alterations don't show literal asterisks."""
+    if not text:
+        return text
+    t = text.strip()
+    # Strip leading ** (model sometimes outputs **Your... with no closing)
+    while t.startswith("**") and not t.startswith("****"):
+        t = t[2:].lstrip()
+    while t.endswith("**") and not t.endswith("****"):
+        t = t[:-2].rstrip()
+    return t
+
+
+def _sanitize_bullet_claims(bullet: str, allowed_text: str) -> str:
+    """
+    Remove unsupported (hallucinated) factual claims from a single bullet.
+    Strategy:
+    - If a number appears in the bullet but that exact number-token does not appear anywhere in allowed_text,
+      strip numeric tokens and measurement units and remove dangling "as measured by ..." phrases.
+    - If a distinctive model/tool token (e.g. Falcon-7B, Qwen3-32B) appears but not in allowed_text, remove it.
+    This intentionally prefers slightly-generic but truthful bullets over impressive-but-false metrics.
+    """
+    if not bullet:
+        return bullet
+    src = (allowed_text or "")
+    b = bullet.strip()
+
+    # Remove unsupported named model/tool tokens (keep conservative: tokens with digits + letters and hyphen)
+    # Example: Qwen3-32B, Falcon-7B, LLaMA, LoRA/QLoRA, Pix2Pix, ConvNext
+    # We only remove if the exact token (case-insensitive) doesn't appear in the sources.
+    token_candidates = set(re.findall(r"\b[A-Za-z][A-Za-z0-9/+.-]{2,}\b", b))
+    src_lower = src.lower()
+    for tok in sorted(token_candidates, key=len, reverse=True):
+        # Skip common English / resume words
+        if tok.lower() in {
+            "and",
+            "the",
+            "for",
+            "with",
+            "by",
+            "to",
+            "of",
+            "in",
+            "on",
+            "as",
+            "a",
+            "an",
+            "sql",
+            "python",
+            "azure",
+            "powerbi",
+            "tensorflow",
+            "pytorch",
+            "llm",
+            "rag",
+            "nlp",
+        }:
+            continue
+        # Only consider "distinctive" tokens that are likely to be specific claims
+        if not (re.search(r"\d", tok) or "/" in tok or "-" in tok or tok.isupper()):
+            continue
+        if tok.lower() not in src_lower:
+            b = re.sub(rf"\b{re.escape(tok)}\b", "", b)
+
+    # If bullet contains numbers, only keep those numbers that exist in source text.
+    nums = re.findall(r"\d[\d,\.]*", b)
+    unsupported = []
+    for n in nums:
+        if n not in src:
+            unsupported.append(n)
+    if unsupported:
+        # Strip all numeric tokens and common adjacent units/markers
+        b = re.sub(
+            r"(\b\d[\d,\.]*\+?\b)\s*(?:\\%|%|ms|s|sec|secs|seconds|mins|minutes|hrs|hours|k|K|m|M|b|B)?",
+            "",
+            b,
+        )
+        # Remove arrow ranges like "1 s → 200 ms" (after numbers stripped, clean leftovers)
+        b = b.replace("→", " ")
+        b = re.sub(r"\(\s*\)", "", b)
+        # Remove dangling metric phrases that often follow invented numbers
+        b = re.sub(r"\bas measured by\b[^,.;]*", "", b, flags=re.I)
+        b = re.sub(r"\bwhile maintaining\b[^,.;]*", "", b, flags=re.I)
+        b = re.sub(r"\bguaranteeing\b[^,.;]*", "", b, flags=re.I)
+        b = re.sub(r"\bimproving\b[^,.;]*\bscore[s]?\b", "improving model explainability", b, flags=re.I)
+
+    # Final cleanup
+    b = re.sub(r"\s{2,}", " ", b).strip()
+    b = re.sub(r"\s+([,.;:])", r"\1", b)
+    b = re.sub(r"^[\-\u2022•\s]+", "", b).strip()
+    if b and not b.endswith("."):
+        b += "."
+    return b
+
+
+def _sanitize_experience_section(latex_experience: str, allowed_text: str) -> str:
+    """Sanitize every \\item bullet inside a LaTeX experience section."""
+    if not latex_experience:
+        return latex_experience
+
+    def _repl(m: re.Match) -> str:
+        content = m.group(1).strip()
+        cleaned = _sanitize_bullet_claims(content, allowed_text=allowed_text)
+        return "\\item " + cleaned
+
+    return re.sub(r"\\item\s+(.+?)(?=(?:\n\s*\\item|\n\s*\\end\{itemize\}|$))", _repl, latex_experience, flags=re.DOTALL)
+
+
 def _merge_experience_into_tex(full_tex: str, new_experience: str) -> str:
     """Replace the Professional Experience section in full_tex with new_experience."""
     # Match common section headers (with or without *)
@@ -353,6 +658,224 @@ def _merge_experience_into_tex(full_tex: str, new_experience: str) -> str:
     before = full_tex[:start]
     after = rest[end:]
     return before + new_experience.strip() + "\n\n" + after
+
+
+def _extract_experience_section(full_tex: str) -> str:
+    """Extract the Experience section from a full LaTeX resume (best-effort)."""
+    # Match common section headers (with or without *)
+    section_pattern = re.compile(
+        r"(\\(?:section|section\*)\s*\{[^}]*Professional\s+Experience[^}]*\})",
+        re.IGNORECASE,
+    )
+    match = section_pattern.search(full_tex)
+    if not match:
+        section_pattern = re.compile(
+            r"(\\(?:section|section\*)\s*\{[^}]*Experience[^}]*\})",
+            re.IGNORECASE,
+        )
+        match = section_pattern.search(full_tex)
+    if not match:
+        return ""
+    start = match.start()
+    rest = full_tex[start:]
+    next_section = re.search(r"\n\s*\\(?:section|section\*)\s*\{", rest[1:])
+    end_doc = rest.find("\\end{document}")
+    if end_doc == -1:
+        end_doc = len(rest)
+    if next_section:
+        end = next_section.start() + 1
+    else:
+        end = end_doc
+    if end <= 0:
+        end = len(rest)
+    return rest[:end].strip()
+
+
+def _parse_experience_role_blocks(experience_tex: str) -> list[dict]:
+    """
+    Parse an Experience section into role blocks.
+    Each block contains:
+      - header: the company/date line + title line (as in LaTeX)
+      - itemize_opts: itemize options string (inside [...]) if present
+      - bullets: list of bullet strings (LaTeX content after \\item)
+      - block_start, block_end: indices in experience_tex for the whole role block (header + itemize)
+      - itemize_start, itemize_end: indices for the itemize content range
+    """
+    if not experience_tex:
+        return []
+    blocks: list[dict] = []
+
+    # Identify each role by the company line: \textbf{...} \hfill ... \\
+    # Then title line usually: \textbf{\underline{...}}
+    company_re = re.compile(r"^\s*\\textbf\s*\{[^}]+\}\s*\\hfill\s*.+?\\\\\s*$", re.MULTILINE)
+    matches = list(company_re.finditer(experience_tex))
+    for mi, m in enumerate(matches):
+        block_start = m.start()
+        block_end = matches[mi + 1].start() if mi + 1 < len(matches) else len(experience_tex)
+        block_text = experience_tex[block_start:block_end]
+
+        # Find itemize inside this block
+        begin_m = re.search(r"\\begin\{itemize\}(\[[^\]]*\])?", block_text)
+        end_m = re.search(r"\\end\{itemize\}", block_text)
+        if not begin_m or not end_m:
+            continue
+        itemize_opts = begin_m.group(1) or ""
+        itemize_start = block_start + begin_m.end()
+        itemize_end = block_start + end_m.start()
+
+        # Header is everything from block start through the begin{itemize} line
+        header = block_text[: begin_m.end()].rstrip()
+        # Extract bullets
+        itemize_body = experience_tex[itemize_start:itemize_end]
+        bullets = [b.strip() for b in re.findall(r"\\item\s+(.+?)(?=(?:\n\s*\\item|$))", itemize_body, flags=re.DOTALL)]
+        blocks.append(
+            {
+                "header": header,
+                "itemize_opts": itemize_opts,
+                "bullets": bullets,
+                "block_start": block_start,
+                "block_end": block_end,
+                "itemize_start": itemize_start,
+                "itemize_end": itemize_end,
+            }
+        )
+    return blocks
+
+
+def _rewrite_role_bullets_strict(
+    role_header: str,
+    bullets: list[str],
+    portfolio_text: str,
+    job_description: str,
+    model_name: str,
+) -> list[str]:
+    """
+    Rewrite bullets for ONE role only. Returns same number of bullets.
+    Hard constraints: do not introduce facts/metrics/tools not present in role bullets or portfolio text.
+    """
+    if not bullets:
+        return bullets
+
+    # Keep prompt small and grounded: provide role header + bullets + relevant portfolio slice
+    pt = (portfolio_text or "").strip()
+    # Heuristic: if role title string appears, slice around it; else just take top chunk
+    role_hint = ""
+    title_m = re.search(r"\\underline\{([^}]+)\}", role_header)
+    if title_m:
+        role_hint = title_m.group(1).strip()
+    pt_snip = pt[:3000]
+    if role_hint and role_hint in pt:
+        i = pt.find(role_hint)
+        pt_snip = pt[max(0, i - 1200) : i + 2000]
+
+    # Bullet source text for "allowed tokens" check
+    allowed_local = ("\n".join(bullets) + "\n\n" + pt_snip).lower()
+
+    prompt = (
+        "You are rewriting resume bullets for EXACTLY ONE role. You MUST NOT mix content from other roles.\n\n"
+        "ROLE HEADER (do not change):\n"
+        f"{role_header}\n\n"
+        "BULLETS (authoritative; keep same count, same role; rewrite wording only):\n"
+        + "\n".join([f"- {b}" for b in bullets])
+        + "\n\n"
+        "PORTFOLIO SNIPPET (only use facts found here):\n"
+        + pt_snip
+        + "\n\n"
+        "JOB DESCRIPTION (keywords to emphasize):\n"
+        + job_description[:1200]
+        + "\n\n"
+        "HARD CONSTRAINTS:\n"
+        "- Output MUST be valid JSON only: {\"bullets\": [\"...\", ...]}.\n"
+        "- Return exactly "
+        + str(len(bullets))
+        + " bullets.\n"
+        "- Do NOT add/remove/reorder bullets.\n"
+        "- Do NOT add ANY new numbers, percentages, counts, timings, or benchmarks.\n"
+        "- Do NOT add any new tools/technologies/models unless they appear in the BULLETS or PORTFOLIO SNIPPET.\n"
+        "- Do NOT reference other companies or other roles.\n"
+        "- Keep LaTeX-safe text (escape % as \\%).\n"
+        "- Prefer expanding acronyms once (e.g. 'Retrieval Augmented Generation (RAG)') if relevant and supported.\n"
+    )
+
+    try:
+        response = client.responses.create(
+            model=model_name,
+            input=[{"role": "user", "content": prompt}],
+        )
+        text = _extract_text_from_response(response).strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```(?:json)?\s*", "", text)
+            text = re.sub(r"\s*```\s*$", "", text)
+        data = json.loads(text)
+        out_bullets = data.get("bullets") if isinstance(data, dict) else None
+        if not isinstance(out_bullets, list) or len(out_bullets) != len(bullets):
+            return bullets
+        cleaned: list[str] = []
+        for ob in out_bullets:
+            if not isinstance(ob, str):
+                cleaned.append("")
+                continue
+            s = ob.strip()
+            s = s.replace("%", "\\%")
+            s = re.sub(r"\s{2,}", " ", s)
+            # If model tried to inject unseen token with digits/hyphens, strip it (local guard)
+            toks = re.findall(r"\b[A-Za-z][A-Za-z0-9/+.-]{2,}\b", s)
+            for tok in toks:
+                if (re.search(r"\d", tok) or "-" in tok or "/" in tok) and tok.lower() not in allowed_local:
+                    s = re.sub(rf"\b{re.escape(tok)}\b", "", s)
+            s = re.sub(r"\s{2,}", " ", s).strip()
+            cleaned.append(s)
+        # Fallback to originals if model returned empty bullets
+        if any(len(c.strip()) < 10 for c in cleaned):
+            return bullets
+        return cleaned
+    except Exception:
+        return bullets
+
+
+def _rewrite_experience_section_strict(
+    experience_tex: str,
+    portfolio_text: str,
+    job_description: str,
+    model_name: str,
+) -> tuple[str, list[tuple[str, str]]]:
+    """
+    Rewrite experience section by rewriting bullets per-role (prevents cross-contamination).
+    Returns (new_experience_tex, changed_pairs[(original, optimized)]) for rationale generation.
+    """
+    blocks = _parse_experience_role_blocks(experience_tex)
+    if not blocks:
+        return experience_tex, []
+
+    # Build new text by slicing original string and replacing itemize bodies
+    out_parts: list[str] = []
+    cursor = 0
+    changed: list[tuple[str, str]] = []
+
+    for b in blocks:
+        out_parts.append(experience_tex[cursor : b["itemize_start"]])
+        new_bullets = _rewrite_role_bullets_strict(
+            role_header=b["header"],
+            bullets=b["bullets"],
+            portfolio_text=portfolio_text,
+            job_description=job_description,
+            model_name=model_name,
+        )
+        # Track a few changed bullet pairs for ALTERATIONS
+        for old, new in zip(b["bullets"], new_bullets):
+            if old.strip() != new.strip():
+                changed.append((old.strip(), new.strip()))
+
+        # Rebuild itemize body with same indentation as original
+        rebuilt = "\n"
+        for nb in new_bullets:
+            rebuilt += " \\item " + nb.strip() + "\n"
+        out_parts.append(rebuilt)
+        out_parts.append(experience_tex[b["itemize_end"] : b["block_end"]])
+        cursor = b["block_end"]
+
+    out_parts.append(experience_tex[cursor:])
+    return "".join(out_parts), changed
 
 
 def _compile_tex_to_pdf(tex_content: str) -> bytes | None:
@@ -389,87 +912,48 @@ def _golden_hand_from_text(
 
     Returns (latex_experience, rationale_text).
     """
-    golden_prompt = (
-        "You are helping a candidate maintain a single LaTeX resume source file while tailoring it "
-        "to a specific job description.\n\n"
-        "You are given:\n"
-        "1) A portfolio PDF (parsed text) containing ALL of their experiences and achievements.\n"
-        "2) Their current LaTeX resume source.\n"
-        "3) A target job description.\n\n"
-        "Your job:\n"
-        "- Focus ONLY on the EXPERIENCE section of the LaTeX resume.\n"
-        "- Using the portfolio text and job description, REWRITE and TAILOR bullets (XYZ format, JD keywords) "
-        "but do NOT remove any content. The output must include every role and every bullet from the current "
-        "resume/portfolio—nothing may be dropped even if it seems less relevant to the job description.\n"
-        "- Preserve LaTeX structure, macros, environments, and formatting style.\n"
-        "- Do NOT invent new companies, titles, or technologies that do not appear in the portfolio text.\n"
-        "- You may reorder bullets within a role for emphasis and rewrite them in XYZ form; you may add 1–2 "
-        "JD-focused bullets per role if the portfolio supports it. Do NOT remove or omit any existing role, "
-        "company, date range, or bullet—the PDF must not lose any line that appears in the source.\n"
-        "- ONE-PAGE TARGET: Two-page resumes are not acceptable. Use \\small or \\footnotesize at the start of "
-        "the Experience section (e.g. after the section heading) so the resume fits on one page. Use strict, "
-        "consistent spacing: no extra spaces inside company names (e.g. 'Apptware Pvt. Ltd., Pune' with single "
-        "spaces only); do not add unintended small spaces.\n"
-        "- DATA SCIENCE INTERN (or the earliest/most junior role) must have exactly 3 bullet points—no more, "
-        "no fewer. Choose the 3 most relevant to the JD from the portfolio. All other roles keep their bullets "
-        "as in the source (or as tailored).\n"
-        "- LaTeX structure (strict): Use \\noindent immediately after the section heading, before "
-        "\\rule{\\textwidth}{0.4pt}, and before each company/role block (before each \\textbf{Company...} line). "
-        "Follow the exact structure of the current resume: \\section*{...} then \\noindent, \\rule{...}, \\small, "
-        "then for each role \\noindent before \\textbf{...}. Do not omit \\noindent.\n"
-        "- Do NOT include any LaTeX comments or meta-text in the output. Never write '% added JD-focused bullet' "
-        "or any comment—only content that should appear on the printed resume.\n"
-        "- All bullets must follow the XYZ resume formula (Google-style): "
-        "Accomplished [outcome] as measured by [metric], by doing [action]. "
-        "Write natural sentences that convey this structure. Do NOT include literal (X), (Y), (Z) or [X], [Y], [Z] "
-        "labels in the bullet text—they must read as professional prose only.\n"
-        "- Output ONLY raw LaTeX. Do NOT wrap the experience section in \\begin{verbatim} or \\begin{lstlisting} "
-        "or any code environment. The LaTeX must be pasteable directly into a resume document.\n\n"
-        "OUTPUT FORMAT (STRICT):\n"
-        "You must respond in three clearly labelled sections, in this exact order:\n"
-        "RATIONALE:\n"
-        "- 1–2 short paragraphs explaining the reasoning behind the changes and how the XYZ structure was applied.\n\n"
-        "XYZ_FORMAT_EXAMPLES:\n"
-        "- 2–3 plain-text example bullets (not LaTeX) that show the XYZ structure, without (X)/(Y)/(Z) labels.\n\n"
-        "LATEX_EXPERIENCE:\n"
-        "- ONLY the UPDATED LaTeX code for the EXPERIENCE section (e.g. \\section*{...} through the end of that "
-        "section). Raw LaTeX only—no verbatim, no markdown, no commentary.\n"
-        "- The section must be COMPLETE: include every role; Data Science Intern (or earliest role) has exactly "
-        "3 bullets; other roles keep all their bullets. Do not omit \\noindent before each role block.\n"
-        "- In LaTeX, percent signs must be written as \\% (e.g. 50\\%) or the rest of the line will be truncated.\n"
-        "- Ensure the section is the ENTIRE Experience section only (all roles, all bullets as above); no other "
-        "sections. Output only this section.\n\n"
-        "=== PORTFOLIO TEXT ===\n"
-        f"{portfolio_text}\n\n"
-        "=== CURRENT LATEX RESUME ===\n"
-        f"{latex_source}\n\n"
-        "=== JOB DESCRIPTION ===\n"
-        f"{job_description}\n"
-    )
+    # Strict approach: rewrite bullets per role-block (prevents cross-contamination),
+    # then generate rationale/compatibility from the diffs.
+    current_experience = _extract_experience_section(latex_source) or ""
+    if not current_experience:
+        raise ValueError("Could not find an Experience section in the LaTeX resume.")
 
-    response = client.responses.create(
-        model=model_name,
-        input=[
-            {
-                "role": "user",
-                "content": golden_prompt,
-            }
-        ],
+    rewritten_experience, changed_pairs = _rewrite_experience_section_strict(
+        current_experience,
+        portfolio_text=portfolio_text,
+        job_description=job_description,
+        model_name=model_name,
     )
-    raw_text = _extract_text_from_response(response).strip()
-    if raw_text.startswith("```"):
-        raw_text = re.sub(r"^```(?:tex|latex)?\s*", "", raw_text)
-        raw_text = re.sub(r"\s*```\s*$", "", raw_text)
-
+    latex_experience = rewritten_experience.strip()
     rationale_text = ""
-    latex_experience = raw_text
-    if "LATEX_EXPERIENCE:" in raw_text:
-        before, after = raw_text.split("LATEX_EXPERIENCE:", 1)
-        rationale_text = before.strip()
-        latex_experience = after.strip()
 
-    if not latex_experience:
-        raise ValueError("Golden Hand returned no LaTeX experience section.")
+    # Generate compatibility/rationale/alterations (no LaTeX) from diffs
+    pairs_snip = changed_pairs[:5]
+    diff_lines = "\n".join(
+        [f"- Original: \"{o}\"\n  Optimized: \"{n}\"" for (o, n) in pairs_snip]
+    )
+    rationale_prompt = (
+        "You are an ATS-focused resume coach. Given the job description and a few bullet rewrites, produce:\n\n"
+        "COMPATIBILITY_RATING:\n"
+        "One line: X.X / 5.0 (Label)\n\n"
+        "RATIONALE:\n"
+        "1–2 paragraphs on why the profile fits this JD.\n\n"
+        "ALTERATIONS:\n"
+        "For each pair below, add a 'Why this improves it' line (1–2 sentences).\n\n"
+        "XYZ_FORMAT_EXAMPLES:\n"
+        "2 short plain-text examples.\n\n"
+        "IMPORTANT: Do not invent new facts/metrics; only explain the rewrite.\n\n"
+        "=== JOB DESCRIPTION ===\n"
+        + job_description[:2500]
+        + "\n\n=== BULLET REWRITES ===\n"
+        + (diff_lines or "- (No bullet changes detected)")
+        + "\n"
+    )
+    try:
+        rr = client.responses.create(model=model_name, input=[{"role": "user", "content": rationale_prompt}])
+        rationale_text = _extract_text_from_response(rr).strip()
+    except Exception:
+        rationale_text = ""
 
     latex_experience = _clean_latex_experience(latex_experience)
     latex_experience = _ensure_noindent_before_roles(latex_experience)
@@ -479,6 +963,11 @@ def _golden_hand_from_text(
         job_description=job_description,
         model_name=model_name,
     )
+    # Anti-hallucination pass: strip any metrics/claims not present in the user's sources.
+    # IMPORTANT: ignore commented-out LaTeX lines so old experiments in % comments do not reappear.
+    cleaned_latex = re.sub(r"^\s*%.*$", "", latex_source or "", flags=re.MULTILINE)
+    allowed_text = (portfolio_text or "") + "\n\n" + cleaned_latex
+    latex_experience = _sanitize_experience_section(latex_experience, allowed_text=allowed_text)
     return latex_experience, rationale_text
 
 
@@ -657,88 +1146,29 @@ def main() -> None:
                 st.warning("Please paste a job description in the sidebar.")
                 return
 
-            golden_prompt = (
-                "You are helping a candidate maintain a single LaTeX resume source file while tailoring it "
-                "to a specific job description.\n\n"
-                "You are given:\n"
-                "1) A portfolio PDF (parsed text) containing ALL of their experiences and achievements.\n"
-                "2) Their current LaTeX resume source.\n"
-                "3) A target job description.\n\n"
-                "Your job:\n"
-                "- Focus ONLY on the EXPERIENCE section of the LaTeX resume.\n"
-                "- Using the portfolio text and job description, REWRITE and TAILOR bullets (XYZ format, JD keywords) "
-                "but do NOT remove any content. The output must include every role and every bullet from the current "
-                "resume/portfolio—nothing may be dropped even if it seems less relevant to the job description.\n"
-                "- Preserve LaTeX structure, macros, environments, and formatting style.\n"
-                "- Do NOT invent new companies, titles, or technologies that do not appear in the portfolio text.\n"
-                "- You may reorder bullets within a role for emphasis and rewrite them in XYZ form; you may add 1–2 "
-                "JD-focused bullets per role if the portfolio supports it. Do NOT remove or omit any existing role, "
-                "company, date range, or bullet—the PDF must not lose any line that appears in the source.\n"
-                "- ONE-PAGE TARGET: Two-page resumes are not acceptable. Use \\small or \\footnotesize at the start of "
-                "the Experience section (e.g. after the section heading) so the resume fits on one page. Use strict, "
-                "consistent spacing: no extra spaces inside company names (e.g. 'Apptware Pvt. Ltd., Pune' with single "
-                "spaces only); do not add unintended small spaces.\n"
-                "- DATA SCIENCE INTERN (or the earliest/most junior role) must have exactly 3 bullet points—no more, "
-                "no fewer. Choose the 3 most relevant to the JD from the portfolio. All other roles keep their bullets "
-                "as in the source (or as tailored).\n"
-                "- LaTeX structure (strict): Use \\noindent immediately after the section heading, before "
-                "\\rule{\\textwidth}{0.4pt}, and before each company/role block (before each \\textbf{Company...} line). "
-                "Follow the exact structure of the current resume: \\section*{...} then \\noindent, \\rule{...}, \\small, "
-                "then for each role \\noindent before \\textbf{...}. Do not omit \\noindent.\n"
-                "- Do NOT include any LaTeX comments or meta-text in the output. Never write '% added JD-focused bullet' "
-                "or any comment—only content that should appear on the printed resume.\n"
-                "- All bullets must follow the XYZ resume formula (Google-style): "
-                "Accomplished [outcome] as measured by [metric], by doing [action]. "
-                "Write natural sentences that convey this structure. Do NOT include literal (X), (Y), (Z) or [X], [Y], [Z] "
-                "labels in the bullet text—they must read as professional prose only.\n"
-                "- Output ONLY raw LaTeX. Do NOT wrap the experience section in \\begin{verbatim} or \\begin{lstlisting} "
-                "or any code environment. The LaTeX must be pasteable directly into a resume document.\n\n"
-                "OUTPUT FORMAT (STRICT):\n"
-                "You must respond in three clearly labelled sections, in this exact order:\n"
-                "RATIONALE:\n"
-                "- 1–2 short paragraphs explaining the reasoning behind the changes and how the XYZ structure was applied.\n\n"
-                "XYZ_FORMAT_EXAMPLES:\n"
-                "- 2–3 plain-text example bullets (not LaTeX) that show the XYZ structure, without (X)/(Y)/(Z) labels.\n\n"
-                "LATEX_EXPERIENCE:\n"
-                "- ONLY the UPDATED LaTeX code for the EXPERIENCE section (e.g. \\section*{...} through the end of that "
-                "section). Raw LaTeX only—no verbatim, no markdown, no commentary.\n"
-                "- The section must be COMPLETE: include every role; Data Science Intern (or earliest role) has exactly "
-                "3 bullets; other roles keep all their bullets. Do not omit \\noindent before each role block.\n"
-                "- In LaTeX, percent signs must be written as \\% (e.g. 50\\%) or the rest of the line will be truncated.\n"
-                "- Ensure the section is the ENTIRE Experience section only (all roles, all bullets as above); no other "
-                "sections. Output only this section.\n\n"
-                "=== PORTFOLIO TEXT ===\n"
-                f"{portfolio_text}\n\n"
-                "=== CURRENT LATEX RESUME ===\n"
-                f"{latex_source}\n\n"
-                "=== JOB DESCRIPTION ===\n"
-                f"{job_description}\n"
-            )
+            # Legacy single-shot prompt no longer used; role-by-role rewrite prevents cross-contamination.
+            golden_prompt = ""
+
+            # Show how many separate role calls we will make (typically 3: DSRS, Apptware ADS, Apptware Intern)
+            current_experience = _extract_experience_section(latex_source) or ""
+            blocks = _parse_experience_role_blocks(current_experience)
+            if blocks:
+                st.caption(
+                    f"Rewriting **{len(blocks)}** experience blocks using **separate model calls per role** to prevent cross-contamination."
+                )
 
             with st.spinner("Crafting a JD-specific Experience section from your portfolio and LaTeX..."):
                 try:
-                    response = client.responses.create(
-                        model=model_name,
-                        input=[
-                            {
-                                "role": "user",
-                                "content": golden_prompt,
-                            }
-                        ],
+                    if not current_experience:
+                        st.error("Could not find an Experience section in the LaTeX resume.")
+                        return
+
+                    latex_experience, rationale_text = _golden_hand_from_text(
+                        portfolio_text=portfolio_text,
+                        latex_source=latex_source,
+                        job_description=job_description,
+                        model_name=model_name,
                     )
-                    raw_text = _extract_text_from_response(response).strip()
-                    if raw_text.startswith("```"):
-                        raw_text = re.sub(r"^```(?:tex|latex)?\\s*", "", raw_text)
-                        raw_text = re.sub(r"\\s*```\\s*$", "", raw_text)
-
-                    rationale_text = ""
-                    latex_experience = raw_text
-
-                    # Split out the LATEX_EXPERIENCE block if present.
-                    if "LATEX_EXPERIENCE:" in raw_text:
-                        before, after = raw_text.split("LATEX_EXPERIENCE:", 1)
-                        rationale_text = before.strip()
-                        latex_experience = after.strip()
                 except Exception as e:
                     st.error(f"Failed to generate LaTeX from LLM: {e}")
                     return
@@ -747,18 +1177,12 @@ def main() -> None:
                 st.error("The model did not return any LaTeX content. Try again or adjust the inputs.")
                 return
 
-            # Clean: remove verbatim wrapper and (X)/(Y)/(Z) labels
-            latex_experience = _clean_latex_experience(latex_experience)
-            # Enforce \noindent before each role and exactly 3 bullets for Data Science Intern
-            latex_experience = _ensure_noindent_before_roles(latex_experience)
-            latex_experience = _ensure_data_science_intern_three_bullets(
-                latex_experience, portfolio_text, job_description, model_name
-            )
             merged_tex = _merge_experience_into_tex(latex_source, latex_experience)
             pdf_bytes = _compile_tex_to_pdf(merged_tex)
             # Persist so switching pages does not lose output
             st.session_state["golden_hand_latex"] = latex_experience
             st.session_state["golden_hand_rationale"] = rationale_text
+            st.session_state["golden_hand_rationale_parsed"] = _parse_golden_hand_rationale(rationale_text)
             st.session_state["golden_hand_merged_tex"] = merged_tex
             st.session_state["golden_hand_pdf_bytes"] = pdf_bytes
             # LLM-generated relevance metric (resume vs JD)
@@ -784,8 +1208,23 @@ def main() -> None:
         # Show last Golden Hand result whenever we have it (so it survives page switches)
         if st.session_state.get("golden_hand_latex"):
             rationale_text = st.session_state.get("golden_hand_rationale", "")
+            parsed = st.session_state.get("golden_hand_rationale_parsed") or _parse_golden_hand_rationale(rationale_text)
             latex_experience = st.session_state["golden_hand_latex"]
             pdf_bytes = st.session_state.get("golden_hand_pdf_bytes")
+
+            # Compatibility Rating — only show when we have a real value (not "**" or empty)
+            compat_raw = (parsed.get("compatibility_rating") or "").strip()
+            compat = compat_raw.replace("*", "").strip()
+            if compat and len(compat) >= 4 and re.search(r"\d", compat):
+                st.markdown("#### Compatibility Rating")
+                st.markdown(compat_raw)  # show original so "4.8 / 5.0 (High...)" is preserved
+                st.markdown("---")
+
+            # Rationale (why profile matches) — strip stray ** so they don't show as literal
+            if parsed.get("rationale"):
+                st.markdown("#### Rationale")
+                st.markdown(_clean_rationale_display(parsed["rationale"]))
+                st.markdown("---")
 
             # Relevance metric (resume vs JD)
             rel_score = st.session_state.get("golden_hand_relevance_score")
@@ -800,9 +1239,16 @@ def main() -> None:
                     st.caption(rel_expl or "")
                 st.markdown("---")
 
-            if rationale_text:
+            # Alterations: what changed and why (Original → Optimized → Why this improves it)
+            if parsed.get("alterations"):
+                with st.expander("#### Alterations (what changed and why)", expanded=True):
+                    st.markdown(_clean_rationale_display(parsed["alterations"]))
+                st.markdown("---")
+
+            if rationale_text and not parsed.get("compatibility_rating") and not parsed.get("rationale"):
                 st.markdown("#### Rationale & XYZ Structure")
                 st.markdown(rationale_text)
+                st.markdown("---")
 
             st.markdown("#### Updated LaTeX EXPERIENCE Section")
             st.caption(
@@ -938,7 +1384,7 @@ def main() -> None:
 
         col_controls, col_info = st.columns([1, 2])
         with col_controls:
-            if st.button("Run scan now (max 10 new jobs)", type="primary"):
+            if st.button("Run scan now (ingests all new jobs from links)", type="primary"):
                 with st.spinner("Scanning curated repos for new entry-level roles..."):
                     try:
                         new_count, total = run_job_scan(model_name=model_name)
@@ -951,7 +1397,7 @@ def main() -> None:
                 "This button is a safe manual trigger for debugging or ad-hoc refreshes."
             )
 
-        jobs = load_latest_results(limit=10)
+        jobs = load_latest_results_mixed(limit=500)
         if not jobs:
             st.warning(
                 "No jobs have been scanned yet. Ensure `links/links.txt` has the GitHub repos and that the scanner "
@@ -959,6 +1405,44 @@ def main() -> None:
             )
         else:
             st.markdown("#### Latest Entry-Level / New Grad Jobs")
+            sources = sorted({j.source_repo for j in jobs})
+            st.caption(f"Showing {len(jobs)} jobs from: {', '.join(sources)}. Sorted newest first (Age / Date Posted).")
+
+            # History: collapsible list of previously loaded JDs (title + JD per sub-expander)
+            jd_cache = st.session_state.get("job_jd_cache", {})
+            if jd_cache:
+                with st.expander("History (loaded JDs)", expanded=False):
+                    for hi, (hist_key, hist_data) in enumerate(list(jd_cache.items())):
+                        if not isinstance(hist_data, dict):
+                            continue
+                        # Skip invalid entries (jobright.ai site link, not a job)
+                        if "jobright.ai|jobright.ai" in hist_key or hist_data.get("title") == "jobright.ai":
+                            continue
+                        # Prefer list title (job title from repo) so History shows correct job name
+                        ht = hist_data.get("title") or hist_data.get("jd_title") or (hist_data.get("jd_text") or "")[:60] or hist_key
+                        if isinstance(ht, str) and len(ht) > 80:
+                            ht = ht[:77] + "..."
+                        with st.expander(ht or "Job", expanded=False):
+                            st.markdown("**Title:** " + (hist_data.get("title") or hist_data.get("jd_title") or "—"))
+                            loc = hist_data.get("location")
+                            age = hist_data.get("age_days")
+                            dpost = hist_data.get("date_posted")
+                            sal = hist_data.get("salary")
+                            if loc or age is not None or dpost or sal:
+                                meta = []
+                                if loc:
+                                    meta.append(f"Location: {loc}")
+                                if sal:
+                                    meta.append(f"Salary: {sal}")
+                                if age is not None:
+                                    meta.append(f"Age: {age}d")
+                                if dpost:
+                                    meta.append(f"Date posted: {dpost}")
+                                st.caption(" · ".join(meta))
+                            jd_hist = (hist_data.get("jd_text") or "")[:12000]
+                            if len(hist_data.get("jd_text") or "") > 12000:
+                                jd_hist += "\n...[truncated]..."
+                            st.text_area("Job description", value=jd_hist, height=200, key=f"hist_{hi}", disabled=True)
 
             # Prepare shared resources for per-job Golden Hand + cover letter
             tc = st.session_state["template_checks"]
@@ -971,15 +1455,70 @@ def main() -> None:
 
             if "job_scanner_results" not in st.session_state:
                 st.session_state["job_scanner_results"] = {}
+            if "job_jd_cache" not in st.session_state:
+                st.session_state["job_jd_cache"] = {}
 
             results = st.session_state["job_scanner_results"]
+            jd_cache = st.session_state["job_jd_cache"]
 
             for idx, job in enumerate(jobs, start=1):
-                with st.expander(f"{idx}. {job.title}", expanded=False):
-                    st.markdown(f"[Open job posting]({job.url})")
-                    st.caption(f"Source: `{job.source_repo}`")
+                expander_label = f"{idx}. {job.title or 'Job posting'}"
+                with st.expander(expander_label, expanded=False):
+                    title_line = "**Job title (from list):** " + (job.title or "—")
+                    if getattr(job, "is_faang", False):
+                        title_line += ' <span style="display:inline-block;background:#22c55e;color:#fff;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:6px;">FAANG</span>'
+                    st.markdown(title_line, unsafe_allow_html=True)
+                    job_url = get_job_posting_url(job)
+                    st.markdown(f"[Open job posting]({job_url})")
+                    age_days = getattr(job, "age_days", None)
+                    date_posted = getattr(job, "date_posted", None)
+                    location = getattr(job, "location", None)
+                    salary = getattr(job, "salary", None)
+                    cap_parts = [f"Source: `{job.source_repo}`"]
+                    if location:
+                        cap_parts.append(f"Location: {location}")
+                    if salary:
+                        cap_parts.append(f"Salary: {salary}")
+                    if age_days is not None:
+                        cap_parts.append(f"Age: {age_days}d")
+                    elif date_posted:
+                        cap_parts.append(f"Date posted: {date_posted}")
+                    st.caption(" · ".join(cap_parts))
 
                     job_key = job.id
+                    cached_jd = jd_cache.get(job_key)
+
+                    if cached_jd:
+                        posting_title = cached_jd.get("jd_title") or job.title or "—"
+                        st.markdown("**Title from posting:** " + posting_title)
+                        jd_snippet = (cached_jd.get("jd_text") or "")[:6000]
+                        if len(cached_jd.get("jd_text") or "") > 6000:
+                            jd_snippet += "\n...[truncated]..."
+                        st.text_area(
+                            "Job description (from posting)",
+                            value=jd_snippet,
+                            height=220,
+                            key=f"job_scanner_jd_display_{idx}",
+                            disabled=True,
+                        )
+                    else:
+                        if st.button("Load job description", key=f"job_load_jd_{idx}"):
+                            with st.spinner("Fetching job description..."):
+                                jd_text, jd_title = _fetch_jd(job_url)
+                                if jd_text or jd_title:
+                                    jd_cache[job_key] = {
+                                        "jd_text": jd_text or "",
+                                        "jd_title": jd_title or "",
+                                        "title": job.title,
+                                        "location": getattr(job, "location", None),
+                                        "age_days": getattr(job, "age_days", None),
+                                        "date_posted": getattr(job, "date_posted", None),
+                                        "salary": getattr(job, "salary", None),
+                                    }
+                                    st.rerun()
+                                else:
+                                    st.error("Could not fetch this job posting. The link may be a company homepage; try opening it in a browser.")
+
                     if st.button(
                         "Generate Golden Hand LaTeX + Cover Letter for this job",
                         key=f"job_scanner_btn_{idx}",
@@ -990,13 +1529,16 @@ def main() -> None:
                                 "Please add them and try again."
                             )
                         else:
-                            jd_text, jd_title = _fetch_jd(job.url)
+                            if cached_jd and cached_jd.get("jd_text"):
+                                jd_text, jd_title = cached_jd.get("jd_text", ""), cached_jd.get("jd_title", "")
+                            else:
+                                jd_text, jd_title = _fetch_jd(job_url)
                             if not jd_text:
                                 st.error("Could not fetch or parse the job description for this posting.")
                             else:
                                 with st.spinner("Running Golden Hand and generating cover letter for this job..."):
                                     try:
-                                        latex_experience, _ = _golden_hand_from_text(
+                                        latex_experience, rationale_text = _golden_hand_from_text(
                                             portfolio_text=portfolio_text,
                                             latex_source=latex_source,
                                             job_description=jd_text,
@@ -1005,7 +1547,9 @@ def main() -> None:
                                     except Exception as e:
                                         st.error(f"Golden Hand failed: {e}")
                                         latex_experience = ""
+                                        rationale_text = ""
 
+                                    rationale_parsed = _parse_golden_hand_rationale(rationale_text) if rationale_text else {}
                                     cover_letter_text = ""
                                     if latex_experience:
                                         # Use resume.tex (roughly stripped) for cover letter context
@@ -1027,10 +1571,31 @@ def main() -> None:
                                         "cover_letter": cover_letter_text,
                                         "jd_text": jd_text,
                                         "jd_title": jd_title,
+                                        "rationale_parsed": rationale_parsed,
+                                    }
+                                    jd_cache[job_key] = {
+                                        "jd_text": jd_text,
+                                        "jd_title": jd_title or "",
+                                        "title": job.title,
+                                        "location": getattr(job, "location", None),
+                                        "age_days": getattr(job, "age_days", None),
+                                        "date_posted": getattr(job, "date_posted", None),
+                                        "salary": getattr(job, "salary", None),
                                     }
 
                     job_result = results.get(job_key)
                     if job_result and job_result.get("latex"):
+                        rp = job_result.get("rationale_parsed") or {}
+                        compat_raw = (rp.get("compatibility_rating") or "").strip()
+                        compat_clean = compat_raw.replace("*", "").strip()
+                        if compat_clean and len(compat_clean) >= 4 and re.search(r"\d", compat_clean):
+                            st.markdown("**Compatibility Rating:** " + compat_raw)
+                        if rp.get("rationale"):
+                            with st.expander("Rationale (why your profile matches)", expanded=False):
+                                st.markdown(_clean_rationale_display(rp["rationale"]))
+                        if rp.get("alterations"):
+                            with st.expander("Alterations (what changed and why)", expanded=True):
+                                st.markdown(_clean_rationale_display(rp["alterations"]))
                         st.markdown("**LaTeX Experience section**")
                         latex_for_display = job_result["latex"].strip()
                         st.text_area(
@@ -1095,19 +1660,6 @@ def main() -> None:
                             key=f"job_scanner_cover_letter_dl_{idx}",
                         )
 
-                    if job_result and job_result.get("jd_text"):
-                        st.markdown("**Job description (from posting)**")
-                        jd_snippet = job_result["jd_text"]
-                        # Show a trimmed version to keep UI compact
-                        if len(jd_snippet) > 4000:
-                            jd_snippet = jd_snippet[:4000] + "\n...[truncated]..."
-                        st.text_area(
-                            "Job description",
-                            value=jd_snippet,
-                            height=220,
-                            key=f"job_scanner_jd_area_{idx}",
-                        )
-
     elif page == "Cover Letter":
         tc = st.session_state["template_checks"]
         cover_path = tc["cover_letter"]
@@ -1139,6 +1691,15 @@ def main() -> None:
                 if resume_pdf_cl:
                     resume_text_cl = extract_text_from_pdf(resume_pdf_cl) or resume_text_cl
 
+                # Clear cached cover letter when sidebar JD changes so we never show a letter for the wrong company
+                jd_used = st.session_state.get("jd_used_for_cover_letter", "")
+                current_jd = job_description.strip()
+                # Compare first 2000 chars so we clear when user pastes a different JD (e.g. Extend vs Root)
+                jd_match = (current_jd[:2000] == jd_used[:2000]) if (jd_used and current_jd) else False
+                if st.session_state.get("cover_letter_text") and not jd_match:
+                    st.session_state.pop("cover_letter_text", None)
+                    st.session_state.pop("jd_used_for_cover_letter", None)
+
                 gen_cover = st.button("Generate Cover Letter", type="primary", key="cover_letter_btn")
                 if gen_cover:
                     if not resume_text_cl:
@@ -1155,6 +1716,7 @@ def main() -> None:
                                     model_name=model_name,
                                 )
                                 st.session_state["cover_letter_text"] = letter
+                                st.session_state["jd_used_for_cover_letter"] = job_description
                             except Exception as e:
                                 st.error(f"Failed to generate cover letter: {e}")
 

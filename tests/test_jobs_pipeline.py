@@ -6,32 +6,47 @@ import pytest
 import jobs_pipeline as jp
 
 
-def test_is_entry_level_line_filters_internships():
-    assert jp._is_entry_level_line("Great New Grad Data Scientist (Entry Level)") is True
-    assert jp._is_entry_level_line("Summer 2026 Software Engineering Intern") is False
-    assert jp._is_entry_level_line("Data Scientist (Co-op)") is False
-
-
-def test_github_to_raw_readme_basic():
+def test_github_url_to_raw_repo_root():
     url = "https://github.com/jobright-ai/2026-Data-Analysis-New-Grad"
-    raw = jp._github_to_raw_readme(url)
+    raw = jp._github_url_to_raw(url)
     assert raw == (
         "https://raw.githubusercontent.com/jobright-ai/2026-Data-Analysis-New-Grad/HEAD/README.md"
     )
 
 
-def test_parse_jobs_only_keeps_entry_level():
+def test_github_url_to_raw_blob():
+    url = "https://github.com/speedyapply/2026-AI-College-Jobs/blob/main/NEW_GRAD_USA.md"
+    raw = jp._github_url_to_raw(url)
+    assert raw == (
+        "https://raw.githubusercontent.com/speedyapply/2026-AI-College-Jobs/main/NEW_GRAD_USA.md"
+    )
+
+
+def test_parse_jobright_table():
     md = """
-    - [Awesome Company - Data Scientist (Entry Level)](https://example.com/job1)
-    - [Another Co - SWE Intern](https://example.com/job2)
-    - [Third Co - New Grad ML Engineer](https://example.com/job3)
-    """
-    jobs = jp._parse_jobs(md, source_repo="demo-repo")
-    titles = [j.title for j in jobs]
-    assert "Awesome Company - Data Scientist (Entry Level)" in titles
-    assert "Third Co - New Grad ML Engineer" in titles
-    # Internship should be filtered out
-    assert all("Intern" not in t for t in titles)
+| Company | Job Title | Location | Work Model | Date Posted |
+| ----- | --------- |  --------- | ---- | ------- |
+| **[Indiana University](https://www.iu.edu)** | **[Research Data Assistant](https://jobright.ai/jobs/info/abc123)** | Indianapolis, IN | On Site | Mar 11 |
+"""
+    jobs = jp._parse_jobright_table(md, source_repo="2026-Data-Analysis-New-Grad")
+    assert len(jobs) == 1
+    assert jobs[0].title == "Indiana University - Research Data Assistant"
+    assert jobs[0].url == "https://jobright.ai/jobs/info/abc123"
+    assert jobs[0].is_faang is False
+
+
+def test_parse_speedyapply_faang_tag():
+    md = """
+<!-- TABLE_FAANG_START -->
+| Company | Position | Location | Salary | Posting | Age |
+| <a href="https://www.nvidia.com"><strong>NVIDIA</strong></a> | Deep Learning Architect | Santa Clara | $172k/yr | <a href="https://nvidia.wd5.myworkdayjobs.com/apply"><img src="https://i.imgur.com/x.png" alt="Apply" width="70"/></a> | 1d |
+<!-- TABLE_FAANG_END -->
+"""
+    jobs = jp._parse_speedyapply_tables(md, source_repo="NEW_GRAD_USA")
+    assert len(jobs) == 1
+    assert "NVIDIA" in jobs[0].title
+    assert jobs[0].url == "https://nvidia.wd5.myworkdayjobs.com/apply"
+    assert jobs[0].is_faang is True
 
 
 def test_run_job_scan_uses_seen_state_and_limits(tmp_path, monkeypatch):
@@ -60,18 +75,19 @@ def test_run_job_scan_uses_seen_state_and_limits(tmp_path, monkeypatch):
     )
     monkeypatch.setattr(jp, "LINKS_FILE", links_file, raising=False)
 
-    # Fake markdown content for the New-Grad repo
+    # Fake markdown content: jobright table format
     def fake_fetch_markdown(url: str, timeout: int = 10) -> str | None:  # type: ignore[override]
         if "Data-Analysis-New-Grad" in url:
             return """
-            - [Company A - Data Analyst (Entry Level)](https://example.com/a)
-            - [Company B - Data Analyst Intern](https://example.com/b)
-            """
+| Company | Job Title | Location | Work Model | Date Posted |
+| ----- | --------- |  --------- | ---- | ------- |
+| **[Company A](https://companya.com)** | **[Data Analyst (Entry Level)](https://example.com/a)** | NYC | Hybrid | Mar 11 |
+"""
         return None
 
     monkeypatch.setattr(jp, "_fetch_markdown", fake_fetch_markdown, raising=False)
 
-    # First run: should see 1 new job (internship filtered)
+    # First run: should see 1 new job from table
     new_count, total = jp.run_job_scan(model_name="dummy-model")
     assert new_count == 1
     assert total == 1
@@ -81,9 +97,10 @@ def test_run_job_scan_uses_seen_state_and_limits(tmp_path, monkeypatch):
     assert new_count2 == 0
     assert total2 == 1
 
-    # Results file should contain our filtered job (no internships)
+    # Results file should contain job from table (job posting URL used)
     data = json.loads((data_dir / "job_results.json").read_text(encoding="utf-8"))
     jobs = data["jobs"]
     assert len(jobs) == 1
-    assert "Data Analyst Intern" not in jobs[0]["title"]
+    assert jobs[0]["url"] == "https://example.com/a"
+    assert "Company A" in jobs[0]["title"]
 
