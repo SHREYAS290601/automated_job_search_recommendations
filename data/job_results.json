@@ -4367,6 +4367,34 @@
       "date_posted": null,
       "location": "Woodland Hills, California",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|RippleMatch - PwC - Tax JD/LLM Associate - application via RippleMatch|https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308641002",
+      "title": "RippleMatch - PwC - Tax JD/LLM Associate - application via RippleMatch",
+      "url": "https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308641002",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://ripplematch.com\"><strong>RippleMatch</strong></a> | PwC - Tax JD/LLM Associate - application via RippleMatch | Sacramento, CA | <a href=\"https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308641002\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 108d |",
+      "added_at": "2026-03-14T18:44:49.276877",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Sacramento, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|RippleMatch - PwC - Tax JD/LLM Associate - application via RippleMatch|https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308630002",
+      "title": "RippleMatch - PwC - Tax JD/LLM Associate - application via RippleMatch",
+      "url": "https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308630002",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://ripplematch.com\"><strong>RippleMatch</strong></a> | PwC - Tax JD/LLM Associate - application via RippleMatch | Atlanta, GA | <a href=\"https://job-boards.greenhouse.io/ripplematchinterns/jobs/8308630002\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 108d |",
+      "added_at": "2026-03-14T18:44:49.276877",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, GA",
+      "salary": null
     }
   ]
 }
