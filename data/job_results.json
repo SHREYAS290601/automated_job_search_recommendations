@@ -4408,7 +4408,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York",
-      "salary": null
+      "salary": "$200k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Hudson River Trading - Junior Quantitative Latency Engineer|https://www.hudsonrivertrading.com/careers/job/?gh_jid=7706268",
@@ -4422,7 +4422,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, Illinois, United States New York, NY, United States",
-      "salary": null
+      "salary": "$406k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|The GEO Group - FINANCIAL DATA ANALYST I|https://bi-incorporated-geogroup.icims.com/jobs/19225/financial-data-analyst-i/job",
@@ -4604,6 +4604,118 @@
       "age_days": null,
       "date_posted": null,
       "location": "Boston, MA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Adobe - 2026 University Graduate - Research Scientist/Engineer|https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2026-University-Graduate---Research-Scientist-Engineer_R160690",
+      "title": "Adobe - 2026 University Graduate - Research Scientist/Engineer",
+      "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2026-University-Graduate---Research-Scientist-Engineer_R160690",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.adobe.com\"><strong>Adobe</strong></a> | 2026 University Graduate - Research Scientist/Engineer | San Francisco | $168k/yr | <a href=\"https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Francisco/XMLNAME-2026-University-Graduate---Research-Scientist-Engineer_R160690\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Francisco",
+      "salary": "$168k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|NVIDIA - Research Scientist - Fundamental Generative AI - New College Grad 2026|https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Research-Scientist--Fundamental-Generative-AI---New-College-Grad-2026_JR2013293-3",
+      "title": "NVIDIA - Research Scientist - Fundamental Generative AI - New College Grad 2026",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Research-Scientist--Fundamental-Generative-AI---New-College-Grad-2026_JR2013293-3",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nvidia.com\"><strong>NVIDIA</strong></a> | Research Scientist - Fundamental Generative AI - New College Grad 2026 | US, CA, Santa Clara | $172k/yr | <a href=\"https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Research-Scientist--Fundamental-Generative-AI---New-College-Grad-2026_JR2013293-3\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US, CA, Santa Clara",
+      "salary": "$172k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|American Express GBT - Data Scientist I|https://travelhrportal.wd1.myworkdayjobs.com/en-US/jobs/job/Manchester-United-Kingdom/Data-Scientist-I_J-78863",
+      "title": "American Express GBT - Data Scientist I",
+      "url": "https://travelhrportal.wd1.myworkdayjobs.com/en-US/jobs/job/Manchester-United-Kingdom/Data-Scientist-I_J-78863",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.amexglobalbusinesstravel.com\"><strong>American Express GBT</strong></a> | Data Scientist I | Manchester, United Kingdom | <a href=\"https://travelhrportal.wd1.myworkdayjobs.com/en-US/jobs/job/Manchester-United-Kingdom/Data-Scientist-I_J-78863\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Manchester, United Kingdom",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|BlackRock - Modelling Data Scientist - Associate - AI Labs|https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/New-York-NY/Modelling-Data-Scientist--Associate---AI-Labs_R261680",
+      "title": "BlackRock - Modelling Data Scientist - Associate - AI Labs",
+      "url": "https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/New-York-NY/Modelling-Data-Scientist--Associate---AI-Labs_R261680",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.blackrock.com/\"><strong>BlackRock</strong></a> | Modelling Data Scientist - Associate - AI Labs | New York, NY | <a href=\"https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/New-York-NY/Modelling-Data-Scientist--Associate---AI-Labs_R261680\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York, NY",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Emory University - Associate Academic Research Scientist- School of Medicine - Nephrology|https://staff-emory.icims.com/jobs/162371/associate-academic-research-scientist--school-of-medicine%2c-nephrology/job",
+      "title": "Emory University - Associate Academic Research Scientist- School of Medicine - Nephrology",
+      "url": "https://staff-emory.icims.com/jobs/162371/associate-academic-research-scientist--school-of-medicine%2c-nephrology/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.emory.edu\"><strong>Emory University</strong></a> | Associate Academic Research Scientist- School of Medicine - Nephrology | US GA Atlanta | <a href=\"https://staff-emory.icims.com/jobs/162371/associate-academic-research-scientist--school-of-medicine%2c-nephrology/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US GA Atlanta",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/e7bdf02f-1b4b-4e1e-8800-63f636c5fcfc",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/e7bdf02f-1b4b-4e1e-8800-63f636c5fcfc",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/e7bdf02f-1b4b-4e1e-8800-63f636c5fcfc\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Fifth Third Bank - Associate Data Scientist|https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Associate-Data-Scientist_R66349",
+      "title": "Fifth Third Bank - Associate Data Scientist",
+      "url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Associate-Data-Scientist_R66349",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.53.com\"><strong>Fifth Third Bank</strong></a> | Associate Data Scientist | Cincinnati, OH | <a href=\"https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Associate-Data-Scientist_R66349\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Cincinnati, OH",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Apollo Global Management - Quantitative Research Associate|https://athene.wd5.myworkdayjobs.com/en-US/apollo_careers/job/El-Segundo-California/Quantitative-Research-Associate_R253490",
+      "title": "Apollo Global Management - Quantitative Research Associate",
+      "url": "https://athene.wd5.myworkdayjobs.com/en-US/apollo_careers/job/El-Segundo-California/Quantitative-Research-Associate_R253490",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.apollo.com\"><strong>Apollo Global Management</strong></a> | Quantitative Research Associate | El Segundo, California | <a href=\"https://athene.wd5.myworkdayjobs.com/en-US/apollo_careers/job/El-Segundo-California/Quantitative-Research-Associate_R253490\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 30d |",
+      "added_at": "2026-03-17T19:07:47.064252",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "El Segundo, California",
       "salary": null
     }
   ]
