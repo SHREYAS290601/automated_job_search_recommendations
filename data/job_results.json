@@ -5067,6 +5067,20 @@
       "date_posted": null,
       "location": "New York, NY, USA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/4c6afd47-cbb6-4855-a7d8-ed1c24f9fb1b",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/4c6afd47-cbb6-4855-a7d8-ed1c24f9fb1b",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/4c6afd47-cbb6-4855-a7d8-ed1c24f9fb1b\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-21T18:41:58.496526",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
     }
   ]
 }
