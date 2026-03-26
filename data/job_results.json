@@ -5431,6 +5431,76 @@
       "date_posted": null,
       "location": "US OH CINCINNATI",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Hut 8 - Customer Success & Operations Associate - Highrise.ai|https://job-boards.greenhouse.io/hut8/jobs/5165498008",
+      "title": "Hut 8 - Customer Success & Operations Associate - Highrise.ai",
+      "url": "https://job-boards.greenhouse.io/hut8/jobs/5165498008",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://hut8.com\"><strong>Hut 8</strong></a> | Customer Success & Operations Associate - Highrise.ai | Miami, FL | <a href=\"https://job-boards.greenhouse.io/hut8/jobs/5165498008\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-26T19:13:28.963208",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Miami, FL",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|LMI Innovation - Junior Data Scientist - Clearance Required|https://careers-lmi.icims.com/jobs/13822/junior-data-scientist---clearance-required/job",
+      "title": "LMI Innovation - Junior Data Scientist - Clearance Required",
+      "url": "https://careers-lmi.icims.com/jobs/13822/junior-data-scientist---clearance-required/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.lmi.org\"><strong>LMI Innovation</strong></a> | Junior Data Scientist - Clearance Required | US CO Colorado Springs US CA El Segundo | <a href=\"https://careers-lmi.icims.com/jobs/13822/junior-data-scientist---clearance-required/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-26T19:13:28.963208",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US CO Colorado Springs US CA El Segundo",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|The Cadmus Group - Data Scientist I|https://careers-cadmusgroup.icims.com/jobs/3151/data-scientist-i/job",
+      "title": "The Cadmus Group - Data Scientist I",
+      "url": "https://careers-cadmusgroup.icims.com/jobs/3151/data-scientist-i/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://cadmusgroup.com\"><strong>The Cadmus Group</strong></a> | Data Scientist I | US NY New York | <a href=\"https://careers-cadmusgroup.icims.com/jobs/3151/data-scientist-i/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-26T19:13:28.963208",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US NY New York",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|American Institutes for Research - Quantitative Research Associate - Educational Measurement|https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163523008",
+      "title": "American Institutes for Research - Quantitative Research Associate - Educational Measurement",
+      "url": "https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163523008",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.air.org\"><strong>American Institutes for Research</strong></a> | Quantitative Research Associate - Educational Measurement | Remote | <a href=\"https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163523008\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-03-26T19:13:28.963208",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|American Institutes for Research - Quantitative Research Associate - Employment & Economic Opportunity|https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163463008",
+      "title": "American Institutes for Research - Quantitative Research Associate - Employment & Economic Opportunity",
+      "url": "https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163463008",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.air.org\"><strong>American Institutes for Research</strong></a> | Quantitative Research Associate - Employment & Economic Opportunity | Remote | <a href=\"https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5163463008\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-03-26T19:13:28.963208",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
     }
   ]
 }
