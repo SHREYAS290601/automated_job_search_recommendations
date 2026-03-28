@@ -5683,6 +5683,76 @@
       "date_posted": null,
       "location": "COLUMBUS, OH",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Capital One - Associate - Artificial Intelligence and Machine Learning Technical Risk - Enterprise Services Risk - Cyber Risk & Analysis|https://capitalone.wd12.myworkdayjobs.com/en-US/capital_one/job/McLean-VA/Associate---Artificial-Intelligence-and-Machine-Learning-Technical-Risk--Enterprise-Services-Risk--Cyber-Risk---Analysis_R239245-1",
+      "title": "Capital One - Associate - Artificial Intelligence and Machine Learning Technical Risk - Enterprise Services Risk - Cyber Risk & Analysis",
+      "url": "https://capitalone.wd12.myworkdayjobs.com/en-US/capital_one/job/McLean-VA/Associate---Artificial-Intelligence-and-Machine-Learning-Technical-Risk--Enterprise-Services-Risk--Cyber-Risk---Analysis_R239245-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.capitalone.com\"><strong>Capital One</strong></a> | Associate - Artificial Intelligence and Machine Learning Technical Risk - Enterprise Services Risk - Cyber Risk & Analysis | McLean, VA | <a href=\"https://capitalone.wd12.myworkdayjobs.com/en-US/capital_one/job/McLean-VA/Associate---Artificial-Intelligence-and-Machine-Learning-Technical-Risk--Enterprise-Services-Risk--Cyber-Risk---Analysis_R239245-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-28T18:48:18.822313",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "McLean, VA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Great Gray Group - Sales Operations Associate - AI-enabled|https://jobs.lever.co/great-gray-group/c1f90893-93e8-4ece-8afc-27553b4a9892/apply",
+      "title": "Great Gray Group - Sales Operations Associate - AI-enabled",
+      "url": "https://jobs.lever.co/great-gray-group/c1f90893-93e8-4ece-8afc-27553b4a9892/apply",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://greatgray.com/\"><strong>Great Gray Group</strong></a> | Sales Operations Associate - AI-enabled | Boston, MA | <a href=\"https://jobs.lever.co/great-gray-group/c1f90893-93e8-4ece-8afc-27553b4a9892/apply\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-28T18:48:18.822313",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Boston, MA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/0476f26f-c596-498b-bd52-338e45ff5de5",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/0476f26f-c596-498b-bd52-338e45ff5de5",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/0476f26f-c596-498b-bd52-338e45ff5de5\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-28T18:48:18.822313",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Legend Biotech - Associate - AI/ML Engineer|https://job-boards.greenhouse.io/legendcareers/jobs/4678481005",
+      "title": "Legend Biotech - Associate - AI/ML Engineer",
+      "url": "https://job-boards.greenhouse.io/legendcareers/jobs/4678481005",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://legendbiotech.com\"><strong>Legend Biotech</strong></a> | Associate - AI/ML Engineer | Somerset, New Jersey, United States | <a href=\"https://job-boards.greenhouse.io/legendcareers/jobs/4678481005\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-03-28T18:48:18.822313",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Somerset, New Jersey, United States",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Frontier Medicines - Scientist I - AI Engineer|https://apply.workable.com/frontier-medicines/j/053F72C901/",
+      "title": "Frontier Medicines - Scientist I - AI Engineer",
+      "url": "https://apply.workable.com/frontier-medicines/j/053F72C901/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://frontiermeds.com\"><strong>Frontier Medicines</strong></a> | Scientist I - AI Engineer | South San Francisco, California, US | <a href=\"https://apply.workable.com/frontier-medicines/j/053F72C901/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-03-28T18:48:18.822313",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "South San Francisco, California, US",
+      "salary": null
     }
   ]
 }
