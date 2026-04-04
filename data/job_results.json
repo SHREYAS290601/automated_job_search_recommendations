@@ -6579,6 +6579,76 @@
       "date_posted": null,
       "location": "Boston",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Derq - Associate ML Engineer|https://apply.workable.com/derq/j/A865B0ED0A/",
+      "title": "Derq - Associate ML Engineer",
+      "url": "https://apply.workable.com/derq/j/A865B0ED0A/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://en.derq.com/\"><strong>Derq</strong></a> | Associate ML Engineer | Delhi, IN | <a href=\"https://apply.workable.com/derq/j/A865B0ED0A/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-04T18:50:24.684580",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Delhi, IN",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Elevance Health - AI Machine Learning Scientist Associate|https://elevancehealth.wd1.myworkdayjobs.com/en-US/ant/job/NY-NEW-YORK-ONE-PENN-PLAZA-35TH-AND-36TH-FL/AI-Machine-Learning-Scientist-Associate_JR187470",
+      "title": "Elevance Health - AI Machine Learning Scientist Associate",
+      "url": "https://elevancehealth.wd1.myworkdayjobs.com/en-US/ant/job/NY-NEW-YORK-ONE-PENN-PLAZA-35TH-AND-36TH-FL/AI-Machine-Learning-Scientist-Associate_JR187470",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.elevancehealth.com\"><strong>Elevance Health</strong></a> | AI Machine Learning Scientist Associate | NY NEW YORK, ONE PENN PLAZA, TH AND TH FL | <a href=\"https://elevancehealth.wd1.myworkdayjobs.com/en-US/ant/job/NY-NEW-YORK-ONE-PENN-PLAZA-35TH-AND-36TH-FL/AI-Machine-Learning-Scientist-Associate_JR187470\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-04T18:50:24.684580",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "NY NEW YORK, ONE PENN PLAZA, TH AND TH FL",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/a204b924-8ba3-44af-a4f1-794e226a6483",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/a204b924-8ba3-44af-a4f1-794e226a6483",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/a204b924-8ba3-44af-a4f1-794e226a6483\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-04T18:50:24.684580",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Johnson Controls - Junior Data Scientist|https://jci.wd5.myworkdayjobs.com/en-US/jci/job/Milwaukee-Wisconsin-United-States-of-America/Junior-Data-Scientist_WD30265724-1",
+      "title": "Johnson Controls - Junior Data Scientist",
+      "url": "https://jci.wd5.myworkdayjobs.com/en-US/jci/job/Milwaukee-Wisconsin-United-States-of-America/Junior-Data-Scientist_WD30265724-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.johnsoncontrols.com\"><strong>Johnson Controls</strong></a> | Junior Data Scientist | Milwaukee Wisconsin United States of America | <a href=\"https://jci.wd5.myworkdayjobs.com/en-US/jci/job/Milwaukee-Wisconsin-United-States-of-America/Junior-Data-Scientist_WD30265724-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-04T18:50:24.684580",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Milwaukee Wisconsin United States of America",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Mindrift - Freelance Junior Journalist - AI Trainer|https://apply.workable.com/toloka-ai/j/D7445DBFB6/",
+      "title": "Mindrift - Freelance Junior Journalist - AI Trainer",
+      "url": "https://apply.workable.com/toloka-ai/j/D7445DBFB6/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://mindrift.ai/\"><strong>Mindrift</strong></a> | Freelance Junior Journalist - AI Trainer | Texas, US | <a href=\"https://apply.workable.com/toloka-ai/j/D7445DBFB6/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-04-04T18:50:24.684580",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Texas, US",
+      "salary": null
     }
   ]
 }
