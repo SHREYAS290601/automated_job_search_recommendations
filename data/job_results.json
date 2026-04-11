@@ -7195,6 +7195,20 @@
       "date_posted": null,
       "location": "Reston, VA, us",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/ebfec501-dfb1-4a91-a37d-ffeac2fc68ac",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/ebfec501-dfb1-4a91-a37d-ffeac2fc68ac",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/ebfec501-dfb1-4a91-a37d-ffeac2fc68ac\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-11T18:52:15.696045",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
     }
   ]
 }
