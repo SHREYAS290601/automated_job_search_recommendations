@@ -7223,6 +7223,76 @@
       "date_posted": null,
       "location": "US, CA, Santa Clara",
       "salary": "$172k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|BlueLabs Analytics - Data Analyst I|https://job-boards.greenhouse.io/bluelabsanalyticsinc/jobs/5106857007",
+      "title": "BlueLabs Analytics - Data Analyst I",
+      "url": "https://job-boards.greenhouse.io/bluelabsanalyticsinc/jobs/5106857007",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://bluelabs.com\"><strong>BlueLabs Analytics</strong></a> | Data Analyst I | Remote | <a href=\"https://job-boards.greenhouse.io/bluelabsanalyticsinc/jobs/5106857007\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-14T19:22:36.807911",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jerry - Associate Applied Data Scientist|https://jobs.ashbyhq.com/jerry.ai/ceff62ad-22ae-4cce-ae54-e5367006217b",
+      "title": "Jerry - Associate Applied Data Scientist",
+      "url": "https://jobs.ashbyhq.com/jerry.ai/ceff62ad-22ae-4cce-ae54-e5367006217b",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.jerry.ai/\"><strong>Jerry</strong></a> | Associate Applied Data Scientist | Atlanta, Georgia | <a href=\"https://jobs.ashbyhq.com/jerry.ai/ceff62ad-22ae-4cce-ae54-e5367006217b\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-14T19:22:36.807911",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, Georgia",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|MATTE PROJECTS - Post Production Fellowship - Edit and AI - Summer 2026 - On-Site|https://job-boards.greenhouse.io/matteprojects/jobs/5968816004",
+      "title": "MATTE PROJECTS - Post Production Fellowship - Edit and AI - Summer 2026 - On-Site",
+      "url": "https://job-boards.greenhouse.io/matteprojects/jobs/5968816004",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://matteprojects.com\"><strong>MATTE PROJECTS</strong></a> | Post Production Fellowship - Edit and AI - Summer 2026 - On-Site | New York, New York | <a href=\"https://job-boards.greenhouse.io/matteprojects/jobs/5968816004\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-14T19:22:36.807911",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York, New York",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Nasdaq - Privacy and AI Compliance Lawyer - Associate General Counsel|https://nasdaq.wd1.myworkdayjobs.com/en-US/global_external_site/job/Toronto-York-St/Privacy-and-AI-Compliance-Lawyer---Associate-General-Counsel_R0024436",
+      "title": "Nasdaq - Privacy and AI Compliance Lawyer - Associate General Counsel",
+      "url": "https://nasdaq.wd1.myworkdayjobs.com/en-US/global_external_site/job/Toronto-York-St/Privacy-and-AI-Compliance-Lawyer---Associate-General-Counsel_R0024436",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nasdaq.com/\"><strong>Nasdaq</strong></a> | Privacy and AI Compliance Lawyer - Associate General Counsel | Toronto York St | <a href=\"https://nasdaq.wd1.myworkdayjobs.com/en-US/global_external_site/job/Toronto-York-St/Privacy-and-AI-Compliance-Lawyer---Associate-General-Counsel_R0024436\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-14T19:22:36.807911",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Toronto York St",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Lynch Consultants - Junior Data Analyst|http://lynchconsultantsllc.applytojob.com/apply/tE6G1pVvL7/Junior-Data-Analyst",
+      "title": "Lynch Consultants - Junior Data Analyst",
+      "url": "http://lynchconsultantsllc.applytojob.com/apply/tE6G1pVvL7/Junior-Data-Analyst",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://lynchconsultants.com/\"><strong>Lynch Consultants</strong></a> | Junior Data Analyst | Camp Springs, MD, United States | <a href=\"http://lynchconsultantsllc.applytojob.com/apply/tE6G1pVvL7/Junior-Data-Analyst\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-04-14T19:22:36.807911",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Camp Springs, MD, United States",
+      "salary": null
     }
   ]
 }
