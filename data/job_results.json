@@ -8861,6 +8861,48 @@
       "date_posted": null,
       "location": "United States",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Akuna Capital - Junior Quantitative Researcher - Prediction Markets|https://www.akunacapital.com/careers/job/7863348/?gh_jid=7863348",
+      "title": "Akuna Capital - Junior Quantitative Researcher - Prediction Markets",
+      "url": "https://www.akunacapital.com/careers/job/7863348/?gh_jid=7863348",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://akunacapital.com\"><strong>Akuna Capital</strong></a> | Junior Quantitative Researcher - Prediction Markets | Chicago, IL | $191k/yr | <a href=\"https://www.akunacapital.com/careers/job/7863348/?gh_jid=7863348\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-29T19:42:19.322158",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Chicago, IL",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Cadent - Associate Data Scientist|https://careers-cadent.icims.com/jobs/1358/associate-data-scientist/job",
+      "title": "Cadent - Associate Data Scientist",
+      "url": "https://careers-cadent.icims.com/jobs/1358/associate-data-scientist/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.thenewcadent.com\"><strong>Cadent</strong></a> | Associate Data Scientist | US NY New York | <a href=\"https://careers-cadent.icims.com/jobs/1358/associate-data-scientist/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-29T19:42:19.322158",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US NY New York",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|TSTC - Junior Data Analyst|https://jobs.lever.co/totalsystech/fff1c37b-8215-4591-99e9-42fcff324c7e/apply",
+      "title": "TSTC - Junior Data Analyst",
+      "url": "https://jobs.lever.co/totalsystech/fff1c37b-8215-4591-99e9-42fcff324c7e/apply",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://totalsystech.com/\"><strong>TSTC</strong></a> | Junior Data Analyst | Arlington, VA | <a href=\"https://jobs.lever.co/totalsystech/fff1c37b-8215-4591-99e9-42fcff324c7e/apply\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-04-29T19:42:19.322158",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Arlington, VA",
+      "salary": null
     }
   ]
 }
