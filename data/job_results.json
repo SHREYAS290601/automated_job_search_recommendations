@@ -9407,6 +9407,48 @@
       "date_posted": null,
       "location": "Perth, WA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|EverAI - Junior/Mid AI Video Artist - Full Remote - Georgia|https://jobs.ashbyhq.com/everai/d1d7e752-dae6-4548-b151-2161df3d7abe",
+      "title": "EverAI - Junior/Mid AI Video Artist - Full Remote - Georgia",
+      "url": "https://jobs.ashbyhq.com/everai/d1d7e752-dae6-4548-b151-2161df3d7abe",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.everai.ai/\"><strong>EverAI</strong></a> | Junior/Mid AI Video Artist - Full Remote - Georgia | Georgia | <a href=\"https://jobs.ashbyhq.com/everai/d1d7e752-dae6-4548-b151-2161df3d7abe\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-05-03T19:05:38.171889",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Georgia",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|EverAI - Junior/Mid AI Video Artist - Full Remote - Worldwide|https://jobs.ashbyhq.com/everai/e34f3b43-b4b8-4780-80cb-3efe45aa061a",
+      "title": "EverAI - Junior/Mid AI Video Artist - Full Remote - Worldwide",
+      "url": "https://jobs.ashbyhq.com/everai/e34f3b43-b4b8-4780-80cb-3efe45aa061a",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.everai.ai/\"><strong>EverAI</strong></a> | Junior/Mid AI Video Artist - Full Remote - Worldwide | Remote | <a href=\"https://jobs.ashbyhq.com/everai/e34f3b43-b4b8-4780-80cb-3efe45aa061a\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-05-03T19:05:38.171889",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|EverAI - Junior/Mid AI Video Artist - Full Remote - USA|https://jobs.ashbyhq.com/everai/dd227ca1-5ef8-4d7a-96f2-14add52ddede",
+      "title": "EverAI - Junior/Mid AI Video Artist - Full Remote - USA",
+      "url": "https://jobs.ashbyhq.com/everai/dd227ca1-5ef8-4d7a-96f2-14add52ddede",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.everai.ai/\"><strong>EverAI</strong></a> | Junior/Mid AI Video Artist - Full Remote - USA | United States of America | <a href=\"https://jobs.ashbyhq.com/everai/dd227ca1-5ef8-4d7a-96f2-14add52ddede\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-05-03T19:05:38.171889",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "United States of America",
+      "salary": null
     }
   ]
 }
