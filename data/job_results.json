@@ -9449,6 +9449,20 @@
       "date_posted": null,
       "location": "United States of America",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Emory University - Associate Academic Research Scientist - School of Medicine - Pediatrics - Emory LOBP|https://staff-emory.icims.com/jobs/165180/associate-academic-research-scientist-%7c-school-of-medicine---pediatrics%2c-emory-lobp/job",
+      "title": "Emory University - Associate Academic Research Scientist - School of Medicine - Pediatrics - Emory LOBP",
+      "url": "https://staff-emory.icims.com/jobs/165180/associate-academic-research-scientist-%7c-school-of-medicine---pediatrics%2c-emory-lobp/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.emory.edu\"><strong>Emory University</strong></a> | Associate Academic Research Scientist - School of Medicine - Pediatrics - Emory LOBP | US GA Atlanta | <a href=\"https://staff-emory.icims.com/jobs/165180/associate-academic-research-scientist-%7c-school-of-medicine---pediatrics%2c-emory-lobp/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-05-04T19:45:19.347495",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US GA Atlanta",
+      "salary": null
     }
   ]
 }
