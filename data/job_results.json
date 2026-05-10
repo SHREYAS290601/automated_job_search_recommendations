@@ -10163,6 +10163,20 @@
       "date_posted": null,
       "location": "Bellevue, WA, USA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Pathward - Artificial Intelligence Analyst - I|https://job-boards.greenhouse.io/pathward/jobs/5992061004",
+      "title": "Pathward - Artificial Intelligence Analyst - I",
+      "url": "https://job-boards.greenhouse.io/pathward/jobs/5992061004",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.pathward.com\"><strong>Pathward</strong></a> | Artificial Intelligence Analyst - I | Remote | <a href=\"https://job-boards.greenhouse.io/pathward/jobs/5992061004\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-05-10T19:10:18.656596",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
     }
   ]
 }
