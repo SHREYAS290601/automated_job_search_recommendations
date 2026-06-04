@@ -11969,6 +11969,48 @@
       "date_posted": null,
       "location": "St Louis, MO",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|NVIDIA - Systems Performance Engineer - Agentic AI Workloads - New College Grad 2026|https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Systems-Performance-Engineer--Agentic-AI-Workloads---New-College-Grad-2026_JR2018588",
+      "title": "NVIDIA - Systems Performance Engineer - Agentic AI Workloads - New College Grad 2026",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Systems-Performance-Engineer--Agentic-AI-Workloads---New-College-Grad-2026_JR2018588",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nvidia.com\"><strong>NVIDIA</strong></a> | Systems Performance Engineer - Agentic AI Workloads - New College Grad 2026 | US, CA, Santa Clara | $172k/yr | <a href=\"https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Systems-Performance-Engineer--Agentic-AI-Workloads---New-College-Grad-2026_JR2018588\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-04T20:09:30.395602",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "US, CA, Santa Clara",
+      "salary": "$172k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|Arkansas Center for Data Sciences - Healthcare Data Analyst I|https://jobs.lever.co/acds/158471e5-34e2-45c5-9ef6-70039aa69179/apply",
+      "title": "Arkansas Center for Data Sciences - Healthcare Data Analyst I",
+      "url": "https://jobs.lever.co/acds/158471e5-34e2-45c5-9ef6-70039aa69179/apply",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://acds.co\"><strong>Arkansas Center for Data Sciences</strong></a> | Healthcare Data Analyst I | North Little Rock, AR | <a href=\"https://jobs.lever.co/acds/158471e5-34e2-45c5-9ef6-70039aa69179/apply\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-04T20:09:30.395602",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "North Little Rock, AR",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Flatiron Health - Associate Research Scientist - Statistical Programming|https://flatiron.com/careers/open-positions/job?gh_jid=7926870",
+      "title": "Flatiron Health - Associate Research Scientist - Statistical Programming",
+      "url": "https://flatiron.com/careers/open-positions/job?gh_jid=7926870",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://flatiron.com/careers\"><strong>Flatiron Health</strong></a> | Associate Research Scientist - Statistical Programming | Durham | <a href=\"https://flatiron.com/careers/open-positions/job?gh_jid=7926870\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-04T20:09:30.395602",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Durham",
+      "salary": null
     }
   ]
 }
