@@ -13593,6 +13593,34 @@
       "date_posted": null,
       "location": "Cambridge, MA USA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Boeing - Engineering Data Scientist - Entry-Level or Associate|https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---Seal-Beach-CA/Engineering-Data-Scientist--Entry-Level-or-Associate-_JR2026514710",
+      "title": "Boeing - Engineering Data Scientist - Entry-Level or Associate",
+      "url": "https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---Seal-Beach-CA/Engineering-Data-Scientist--Entry-Level-or-Associate-_JR2026514710",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://boeing.com/\"><strong>Boeing</strong></a> | Engineering Data Scientist - Entry-Level or Associate | USA Seal Beach, CA | <a href=\"https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---Seal-Beach-CA/Engineering-Data-Scientist--Entry-Level-or-Associate-_JR2026514710\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-14T19:41:25.456005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA Seal Beach, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|GDIT - AI Business Data Analyst Associate|https://gdit.wd5.myworkdayjobs.com/en-US/external_career_site/job/Any-Location--Remote/AI-Business-Data-Analyst-Associate_RQ221973-2",
+      "title": "GDIT - AI Business Data Analyst Associate",
+      "url": "https://gdit.wd5.myworkdayjobs.com/en-US/external_career_site/job/Any-Location--Remote/AI-Business-Data-Analyst-Associate_RQ221973-2",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.gdit.com\"><strong>GDIT</strong></a> | AI Business Data Analyst Associate | USA VA Home Office VAHOME | <a href=\"https://gdit.wd5.myworkdayjobs.com/en-US/external_career_site/job/Any-Location--Remote/AI-Business-Data-Analyst-Associate_RQ221973-2\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-14T19:41:25.456005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA VA Home Office VAHOME",
+      "salary": null
     }
   ]
 }
