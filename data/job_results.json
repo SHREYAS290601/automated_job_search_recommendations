@@ -14223,6 +14223,48 @@
       "date_posted": null,
       "location": "New York, New York, United States of America",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Edwards Lifesciences - Research Scientist I|https://edwards.wd5.myworkdayjobs.com/en-US/edwardscareers/job/USA---California--Irvine/Research-Scientist-I_Req-48711",
+      "title": "Edwards Lifesciences - Research Scientist I",
+      "url": "https://edwards.wd5.myworkdayjobs.com/en-US/edwardscareers/job/USA---California--Irvine/Research-Scientist-I_Req-48711",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.edwards.com\"><strong>Edwards Lifesciences</strong></a> | Research Scientist I | USA California Irvine | <a href=\"https://edwards.wd5.myworkdayjobs.com/en-US/edwardscareers/job/USA---California--Irvine/Research-Scientist-I_Req-48711\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-19T19:53:12.458262",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA California Irvine",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Home Depot - Associate Data Scientist|https://homedepot.wd5.myworkdayjobs.com/en-US/careerdepot/job/STORE-SUPPORT-CENTER-ATLANTA---9090/Associate-Data-Scientist_Req183993",
+      "title": "Home Depot - Associate Data Scientist",
+      "url": "https://homedepot.wd5.myworkdayjobs.com/en-US/careerdepot/job/STORE-SUPPORT-CENTER-ATLANTA---9090/Associate-Data-Scientist_Req183993",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://homedepot.com/\"><strong>Home Depot</strong></a> | Associate Data Scientist | STORE SUPPORT CENTER, ATLANTA | <a href=\"https://homedepot.wd5.myworkdayjobs.com/en-US/careerdepot/job/STORE-SUPPORT-CENTER-ATLANTA---9090/Associate-Data-Scientist_Req183993\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-19T19:53:12.458262",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "STORE SUPPORT CENTER, ATLANTA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|True Anomaly - Machine Learning Engineer - I-III|https://job-boards.greenhouse.io/trueanomalyinc/jobs/5138856007",
+      "title": "True Anomaly - Machine Learning Engineer - I-III",
+      "url": "https://job-boards.greenhouse.io/trueanomalyinc/jobs/5138856007",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.trueanomaly.space\"><strong>True Anomaly</strong></a> | Machine Learning Engineer - I-III | Denver, CO or Long Beach, CA | <a href=\"https://job-boards.greenhouse.io/trueanomalyinc/jobs/5138856007\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-19T19:53:12.458262",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Denver, CO or Long Beach, CA",
+      "salary": null
     }
   ]
 }
