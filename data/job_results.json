@@ -14265,6 +14265,62 @@
       "date_posted": null,
       "location": "Denver, CO or Long Beach, CA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|SBT Global - Junior Data Analyst - Operations / Sales Analytics|https://jobs.smartrecruiters.com/SBTGlobalInc/3743990013715446-junior-data-analyst-operations-sales-analytics-?oga=true",
+      "title": "SBT Global - Junior Data Analyst - Operations / Sales Analytics",
+      "url": "https://jobs.smartrecruiters.com/SBTGlobalInc/3743990013715446-junior-data-analyst-operations-sales-analytics-?oga=true",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.sbtglobal.com/\"><strong>SBT Global</strong></a> | Junior Data Analyst - Operations / Sales Analytics | Cerritos, CA, us | <a href=\"https://jobs.smartrecruiters.com/SBTGlobalInc/3743990013715446-junior-data-analyst-operations-sales-analytics-?oga=true\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-06-20T19:41:34.901396",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Cerritos, CA, us",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Dealer Tire - Associate Data Scientist|https://dealertire.wd5.myworkdayjobs.com/en-US/dealertirellc-careers/job/Remote-Ohio/Associate-Data-Scientist_R13774",
+      "title": "Dealer Tire - Associate Data Scientist",
+      "url": "https://dealertire.wd5.myworkdayjobs.com/en-US/dealertirellc-careers/job/Remote-Ohio/Associate-Data-Scientist_R13774",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.dealertire.com/\"><strong>Dealer Tire</strong></a> | Associate Data Scientist | Remote | <a href=\"https://dealertire.wd5.myworkdayjobs.com/en-US/dealertirellc-careers/job/Remote-Ohio/Associate-Data-Scientist_R13774\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-20T19:41:34.901396",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Morningstar - Associate Quantitative Analyst|https://morningstar.wd5.myworkdayjobs.com/en-US/confidential/job/Chicago/Associate-Quantitative-Analyst_REQ-055869",
+      "title": "Morningstar - Associate Quantitative Analyst",
+      "url": "https://morningstar.wd5.myworkdayjobs.com/en-US/confidential/job/Chicago/Associate-Quantitative-Analyst_REQ-055869",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.morningstar.com\"><strong>Morningstar</strong></a> | Associate Quantitative Analyst | Chicago | <a href=\"https://morningstar.wd5.myworkdayjobs.com/en-US/confidential/job/Chicago/Associate-Quantitative-Analyst_REQ-055869\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-20T19:41:34.901396",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Chicago",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Thermo Fisher Scientific - Associate Research Scientist - Vaccines|https://thermofisher.wd5.myworkdayjobs.com/en-US/thermofishercareers/job/Richmond-Virginia-USA/Associate-Research-Scientist---Vaccines_R-01357121",
+      "title": "Thermo Fisher Scientific - Associate Research Scientist - Vaccines",
+      "url": "https://thermofisher.wd5.myworkdayjobs.com/en-US/thermofishercareers/job/Richmond-Virginia-USA/Associate-Research-Scientist---Vaccines_R-01357121",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://thermofisher.com\"><strong>Thermo Fisher Scientific</strong></a> | Associate Research Scientist - Vaccines | Richmond, Virginia, USA | <a href=\"https://thermofisher.wd5.myworkdayjobs.com/en-US/thermofishercareers/job/Richmond-Virginia-USA/Associate-Research-Scientist---Vaccines_R-01357121\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-20T19:41:34.901396",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Richmond, Virginia, USA",
+      "salary": null
     }
   ]
 }
