@@ -14923,6 +14923,34 @@
       "date_posted": null,
       "location": "Arlington Office",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Gen - Machine Learning Engineer I|https://jobs.ashbyhq.com/gen-digital/04d8f8b7-135c-4b93-8dbb-f47b9ddb51ea",
+      "title": "Gen - Machine Learning Engineer I",
+      "url": "https://jobs.ashbyhq.com/gen-digital/04d8f8b7-135c-4b93-8dbb-f47b9ddb51ea",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.gendigital.com\"><strong>Gen</strong></a> | Machine Learning Engineer I | USA Mountain View, CA | <a href=\"https://jobs.ashbyhq.com/gen-digital/04d8f8b7-135c-4b93-8dbb-f47b9ddb51ea\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-06-27T19:25:36.827592",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA Mountain View, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|ChainGPT - AI-Native Content Marketer - Early Career - Americas|https://apply.workable.com/chaingpt/j/D1D6D0AA3C/",
+      "title": "ChainGPT - AI-Native Content Marketer - Early Career - Americas",
+      "url": "https://apply.workable.com/chaingpt/j/D1D6D0AA3C/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.chaingpt.org/\"><strong>ChainGPT</strong></a> | AI-Native Content Marketer - Early Career - Americas | AR | <a href=\"https://apply.workable.com/chaingpt/j/D1D6D0AA3C/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-06-27T19:25:36.827592",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "AR",
+      "salary": null
     }
   ]
 }
