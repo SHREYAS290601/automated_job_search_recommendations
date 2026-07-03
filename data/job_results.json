@@ -15314,7 +15314,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Austin, Texas, United States",
-      "salary": null
+      "salary": "$201k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Optiver - Graduate Quantitative Researcher - PhD - 2027 Start|https://www.optiver.com/join-us/jobs/8451762002/?gh_jid=8451762002",
@@ -15328,7 +15328,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, Illinois, United States",
-      "salary": null
+      "salary": "$201k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|A-TEK - Health IT Data Analyst I|https://job-boards.greenhouse.io/atek/jobs/5289002008",
@@ -15398,6 +15398,34 @@
       "age_days": null,
       "date_posted": null,
       "location": "California",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Aptura - Investment Banking Associate - AI Residency - Part-time - Applied AI x Corporate Finance|https://jobs.ashbyhq.com/aptura/db948822-50bd-483e-ab3f-32aeb84ba5e2",
+      "title": "Aptura - Investment Banking Associate - AI Residency - Part-time - Applied AI x Corporate Finance",
+      "url": "https://jobs.ashbyhq.com/aptura/db948822-50bd-483e-ab3f-32aeb84ba5e2",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://aptura.ai/\"><strong>Aptura</strong></a> | Investment Banking Associate - AI Residency - Part-time - Applied AI x Corporate Finance | New York City, NY | <a href=\"https://jobs.ashbyhq.com/aptura/db948822-50bd-483e-ab3f-32aeb84ba5e2\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-07-03T19:27:26.587660",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Blackstone - 2027 Blackstone Credit and Insurance - Quant and Portfolio Analytics Summer Analyst - London|https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Berkeley-Square-House-London/XMLNAME-2027-Blackstone-Credit-and-Insurance--Quant-and-Portfolio-Analytics-Summer-Analyst---London-_43819",
+      "title": "Blackstone - 2027 Blackstone Credit and Insurance - Quant and Portfolio Analytics Summer Analyst - London",
+      "url": "https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Berkeley-Square-House-London/XMLNAME-2027-Blackstone-Credit-and-Insurance--Quant-and-Portfolio-Analytics-Summer-Analyst---London-_43819",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.blackstone.com\"><strong>Blackstone</strong></a> | 2027 Blackstone Credit and Insurance - Quant and Portfolio Analytics Summer Analyst - London | Berkeley Square House London | <a href=\"https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Berkeley-Square-House-London/XMLNAME-2027-Blackstone-Credit-and-Insurance--Quant-and-Portfolio-Analytics-Summer-Analyst---London-_43819\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 31d |",
+      "added_at": "2026-07-03T19:27:26.587660",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Berkeley Square House London",
       "salary": null
     }
   ]
