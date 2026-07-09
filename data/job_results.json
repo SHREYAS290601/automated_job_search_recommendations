@@ -15944,7 +15944,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, IL",
-      "salary": null
+      "salary": "$191k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Jane Street - Machine Learning Researcher Full-Time: New Grad|https://www.janestreet.com/join-jane-street/position/8576928002",
@@ -15958,7 +15958,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY",
-      "salary": null
+      "salary": "$398k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Jane Street - Quantitative Researcher Full-Time: New Grad|https://www.janestreet.com/join-jane-street/position/8573726002",
@@ -15972,7 +15972,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY",
-      "salary": null
+      "salary": "$398k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Jane Street - Quantitative Trader Full-Time: New Grad|https://www.janestreet.com/join-jane-street/position/8573523002",
@@ -15986,7 +15986,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY",
-      "salary": null
+      "salary": "$398k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Researcher - 2026 PhDs|https://www.hudsonrivertrading.com/careers/job/?gh_jid=7133986",
@@ -16000,7 +16000,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY +2",
-      "salary": null
+      "salary": "$406k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Ann & Robert H. Lurie Children\u2019s Hospital of Chicago - Data Engineer I|https://luriechildrens.wd1.myworkdayjobs.com/en-US/externalportal/job/Streeterville-Chicago-IL/Data-Engineer-I_JR2026-1951",
@@ -16966,6 +16966,76 @@
       "age_days": null,
       "date_posted": null,
       "location": "Columbia, SC",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|NVIDIA - AI and FSI Developer Technology Engineer - New College Grad 2026|https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/AI-Developer-Technology-Engineer--Financial-Sector---New-College-Grad-2026_JR2013803",
+      "title": "NVIDIA - AI and FSI Developer Technology Engineer - New College Grad 2026",
+      "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/AI-Developer-Technology-Engineer--Financial-Sector---New-College-Grad-2026_JR2013803",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nvidia.com\"><strong>NVIDIA</strong></a> | AI and FSI Developer Technology Engineer - New College Grad 2026 | Remote - Santa Clara, CA +2 | $172k/yr | <a href=\"https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/AI-Developer-Technology-Engineer--Financial-Sector---New-College-Grad-2026_JR2013803\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 92d |",
+      "added_at": "2026-07-09T19:50:44.216087",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote - Santa Clara, CA +2",
+      "salary": "$172k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|Newman University - Graduate Assistant - Newman Institute for AI & the Common Good|http://newmanuniversity.applytojob.com/apply/Agib5c4ACe/Graduate-Assistant-Newman-Institute-For-AI-The-Common-Good",
+      "title": "Newman University - Graduate Assistant - Newman Institute for AI & the Common Good",
+      "url": "http://newmanuniversity.applytojob.com/apply/Agib5c4ACe/Graduate-Assistant-Newman-Institute-For-AI-The-Common-Good",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://newmanu.edu/\"><strong>Newman University</strong></a> | Graduate Assistant - Newman Institute for AI & the Common Good | Wichita, KS | <a href=\"http://newmanuniversity.applytojob.com/apply/Agib5c4ACe/Graduate-Assistant-Newman-Institute-For-AI-The-Common-Good\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-07-09T19:50:44.216087",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Wichita, KS",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|KLA - Data Scientist - Entry Level - GSCS|https://kla.wd1.myworkdayjobs.com/en-US/ur/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246",
+      "title": "KLA - Data Scientist - Entry Level - GSCS",
+      "url": "https://kla.wd1.myworkdayjobs.com/en-US/ur/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.kla.com\"><strong>KLA</strong></a> | Data Scientist - Entry Level - GSCS | Milpitas, CA | <a href=\"https://kla.wd1.myworkdayjobs.com/en-US/ur/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-07-09T19:50:44.216087",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Milpitas, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|NewsBreak - NewsBreak Venture - AI Growth Intelligence Engineer - New Grad\uff09|https://job-boards.greenhouse.io/newsbreak/jobs/4694899006",
+      "title": "NewsBreak - NewsBreak Venture - AI Growth Intelligence Engineer - New Grad\uff09",
+      "url": "https://job-boards.greenhouse.io/newsbreak/jobs/4694899006",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://careers.newsbreak.com/\"><strong>NewsBreak</strong></a> | NewsBreak Venture - AI Growth Intelligence Engineer - New Grad\uff09 | Mountain View, CA | <a href=\"https://job-boards.greenhouse.io/newsbreak/jobs/4694899006\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-07-09T19:50:44.216087",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Mountain View, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Tower Research Capital - Quantitative Trader - 2027|https://www.tower-research.com/open-positions/?gh_jid=8024142",
+      "title": "Tower Research Capital - Quantitative Trader - 2027",
+      "url": "https://www.tower-research.com/open-positions/?gh_jid=8024142",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.tower-research.com\"><strong>Tower Research Capital</strong></a> | Quantitative Trader - 2027 | Chicago, IL +1 | <a href=\"https://www.tower-research.com/open-positions/?gh_jid=8024142\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 4d |",
+      "added_at": "2026-07-09T19:50:44.216087",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Chicago, IL +1",
       "salary": null
     }
   ]
