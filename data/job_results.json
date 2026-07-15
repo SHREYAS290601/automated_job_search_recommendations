@@ -17358,7 +17358,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, IL",
-      "salary": null
+      "salary": "$191k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Akuna Capital - Junior Quantitative Researcher|https://www.akunacapital.com/careers/job/8036541/?gh_jid=8036541",
@@ -17372,7 +17372,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, IL",
-      "salary": null
+      "salary": "$191k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Researcher - 2027 PhDs|https://www.hudsonrivertrading.com/careers/job/?gh_jid=8059845",
@@ -17386,7 +17386,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "London, United Kingdom +2",
-      "salary": null
+      "salary": "$406k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Researcher - 2027 Grads|https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050",
@@ -17400,7 +17400,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "London, United Kingdom +2",
-      "salary": null
+      "salary": "$406k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Capital Technology Group - Junior Data Engineer|https://boards.greenhouse.io/capitaltg/jobs/5181750007?gh_jid=5181750007",
@@ -17778,6 +17778,132 @@
       "age_days": null,
       "date_posted": null,
       "location": "Naperville, IL",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Five Rings - Campus Full Time 2027 - Quantitative Trader|https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008",
+      "title": "Five Rings - Campus Full Time 2027 - Quantitative Trader",
+      "url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://fiverings.com/careers/\"><strong>Five Rings</strong></a> | Campus Full Time 2027 - Quantitative Trader | New York City, NY | $381k/yr | <a href=\"https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Esri - Software Development Engineer I - Agentic AI - ArcGIS Enterprise|https://www.esri.com/careers/5186832007?gh_jid=5186832007",
+      "title": "Esri - Software Development Engineer I - Agentic AI - ArcGIS Enterprise",
+      "url": "https://www.esri.com/careers/5186832007?gh_jid=5186832007",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.esri.com\"><strong>Esri</strong></a> | Software Development Engineer I - Agentic AI - ArcGIS Enterprise | Redlands, CA | <a href=\"https://www.esri.com/careers/5186832007?gh_jid=5186832007\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Redlands, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Fidelity Investments - AM Quantitative Analyst I|https://fmr.wd1.myworkdayjobs.com/en-US/fidelitycareers/job/Boston-MA/AM-Quantitative-Analyst-I_2132397",
+      "title": "Fidelity Investments - AM Quantitative Analyst I",
+      "url": "https://fmr.wd1.myworkdayjobs.com/en-US/fidelitycareers/job/Boston-MA/AM-Quantitative-Analyst-I_2132397",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://fidelity.com/\"><strong>Fidelity Investments</strong></a> | AM Quantitative Analyst I | Boston, MA | <a href=\"https://fmr.wd1.myworkdayjobs.com/en-US/fidelitycareers/job/Boston-MA/AM-Quantitative-Analyst-I_2132397\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Boston, MA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|DXC Technology - Associate Data Analyst|https://dxctechnology.wd1.myworkdayjobs.com/en-US/dxcjobs/job/USA---VA---FALLS-CHURCH/Data-Analyst_51584789",
+      "title": "DXC Technology - Associate Data Analyst",
+      "url": "https://dxctechnology.wd1.myworkdayjobs.com/en-US/dxcjobs/job/USA---VA---FALLS-CHURCH/Data-Analyst_51584789",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://dxc.com\"><strong>DXC Technology</strong></a> | Associate Data Analyst | Falls Church, VA | <a href=\"https://dxctechnology.wd1.myworkdayjobs.com/en-US/dxcjobs/job/USA---VA---FALLS-CHURCH/Data-Analyst_51584789\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Falls Church, VA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Liberty University - Business Data Analyst I|https://liberty.wd5.myworkdayjobs.com/en-US/lu_job_board_staff/job/Remote-Location/Business-Data-Analyst-I_R0011917",
+      "title": "Liberty University - Business Data Analyst I",
+      "url": "https://liberty.wd5.myworkdayjobs.com/en-US/lu_job_board_staff/job/Remote-Location/Business-Data-Analyst-I_R0011917",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.liberty.edu\"><strong>Liberty University</strong></a> | Business Data Analyst I | Remote | <a href=\"https://liberty.wd5.myworkdayjobs.com/en-US/lu_job_board_staff/job/Remote-Location/Business-Data-Analyst-I_R0011917\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|LMI Innovation - Junior Data Analyst - TS/SCI with Polygraph Required|https://careers-lmi.icims.com/jobs/14248/junior-data-analyst---ts-sci-with-polygraph-required/job",
+      "title": "LMI Innovation - Junior Data Analyst - TS/SCI with Polygraph Required",
+      "url": "https://careers-lmi.icims.com/jobs/14248/junior-data-analyst---ts-sci-with-polygraph-required/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.lmi.org\"><strong>LMI Innovation</strong></a> | Junior Data Analyst - TS/SCI with Polygraph Required | Washington, DC +1 | <a href=\"https://careers-lmi.icims.com/jobs/14248/junior-data-analyst---ts-sci-with-polygraph-required/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Oklahoma State Government - Data Scientist I|https://okgov.wd1.myworkdayjobs.com/en-US/okgovjobs/job/Oklahoma-County/Data-Scientist-I_JR62520",
+      "title": "Oklahoma State Government - Data Scientist I",
+      "url": "https://okgov.wd1.myworkdayjobs.com/en-US/okgovjobs/job/Oklahoma-County/Data-Scientist-I_JR62520",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://oklahoma.gov\"><strong>Oklahoma State Government</strong></a> | Data Scientist I | Oklahoma City, OK | <a href=\"https://okgov.wd1.myworkdayjobs.com/en-US/okgovjobs/job/Oklahoma-County/Data-Scientist-I_JR62520\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Oklahoma City, OK",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Trexquant - Quantitative Researcher - Early Career - USA|https://apply.workable.com/trexquant/j/974C6CE712/",
+      "title": "Trexquant - Quantitative Researcher - Early Career - USA",
+      "url": "https://apply.workable.com/trexquant/j/974C6CE712/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://trexquant.com/\"><strong>Trexquant</strong></a> | Quantitative Researcher - Early Career - USA | New York City, NY +1 | <a href=\"https://apply.workable.com/trexquant/j/974C6CE712/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 2d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Cambia - Product Manager I or II - DOE - AI|https://cambiahealth.wd504.myworkdayjobs.com/en-US/external/job/Portland-OR/Product-Manager-I-or-II--DOE--AI-_R-6499",
+      "title": "Cambia - Product Manager I or II - DOE - AI",
+      "url": "https://cambiahealth.wd504.myworkdayjobs.com/en-US/external/job/Portland-OR/Product-Manager-I-or-II--DOE--AI-_R-6499",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.cambiahealth.com\"><strong>Cambia</strong></a> | Product Manager I or II - DOE - AI | Portland, OR +7 | <a href=\"https://cambiahealth.wd504.myworkdayjobs.com/en-US/external/job/Portland-OR/Product-Manager-I-or-II--DOE--AI-_R-6499\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 48d |",
+      "added_at": "2026-07-15T19:16:09.685183",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Portland, OR +7",
       "salary": null
     }
   ]
