@@ -17932,7 +17932,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY",
-      "salary": null
+      "salary": "$338k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Citadel Securities - Quantitative Research Analyst - University Graduate - US|https://www.citadelsecurities.com/careers/details/quantitative-research-analyst-university-graduate-us/",
@@ -17946,7 +17946,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Miami, FL +1",
-      "salary": null
+      "salary": "$338k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Citadel Securities - Quantitative Trader - University Graduate - US - New York|https://www.citadelsecurities.com/careers/details/quantitative-trader-university-graduate-us-new-york/",
@@ -17960,7 +17960,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "New York City, NY",
-      "salary": null
+      "salary": "$338k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Citadel Securities - Quantitative Trader - University Graduate - US - Miami|https://www.citadelsecurities.com/careers/details/quantitative-trader-university-graduate-us-miami/",
@@ -17974,7 +17974,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Miami, FL",
-      "salary": null
+      "salary": "$338k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|ENSCO - Junior Scientific Data Analyst|https://job-boards.greenhouse.io/ensco/jobs/5354767008",
@@ -18086,6 +18086,90 @@
       "age_days": null,
       "date_posted": null,
       "location": "Houston, TX",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Bosch - Associate Vehicle Data Analyst|https://jobs.smartrecruiters.com/BoschGroup/744000138177390-associate-vehicle-data-analyst?oga=true",
+      "title": "Bosch - Associate Vehicle Data Analyst",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000138177390-associate-vehicle-data-analyst?oga=true",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.bosch.com/\"><strong>Bosch</strong></a> | Associate Vehicle Data Analyst | Owatonna, MN | <a href=\"https://jobs.smartrecruiters.com/BoschGroup/744000138177390-associate-vehicle-data-analyst?oga=true\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Owatonna, MN",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Captivation Software - Software Engineer 1 - AI/ML/Terraform/C++/AWS/GPU|https://job-boards.greenhouse.io/captivation/jobs/5362075008",
+      "title": "Captivation Software - Software Engineer 1 - AI/ML/Terraform/C++/AWS/GPU",
+      "url": "https://job-boards.greenhouse.io/captivation/jobs/5362075008",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://captivation.us\"><strong>Captivation Software</strong></a> | Software Engineer 1 - AI/ML/Terraform/C++/AWS/GPU | Annapolis Junction, MD | <a href=\"https://job-boards.greenhouse.io/captivation/jobs/5362075008\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Annapolis Junction, MD",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Vocal Media - Junior Program Manager - AI Studio|https://jobs.lever.co/get-vocal-pbc/1b3b3d72-1b63-4c73-81ce-be788f3230c4",
+      "title": "Vocal Media - Junior Program Manager - AI Studio",
+      "url": "https://jobs.lever.co/get-vocal-pbc/1b3b3d72-1b63-4c73-81ce-be788f3230c4",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://vocalmedia.io/\"><strong>Vocal Media</strong></a> | Junior Program Manager - AI Studio | Remote | <a href=\"https://jobs.lever.co/get-vocal-pbc/1b3b3d72-1b63-4c73-81ce-be788f3230c4\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Bank of America - Client Quantitative Analyst I - Data Reporting and Operations Management|https://ghr.wd1.myworkdayjobs.com/en-US/us-emplsv/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661-1",
+      "title": "Bank of America - Client Quantitative Analyst I - Data Reporting and Operations Management",
+      "url": "https://ghr.wd1.myworkdayjobs.com/en-US/us-emplsv/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.bankofamerica.com\"><strong>Bank of America</strong></a> | Client Quantitative Analyst I - Data Reporting and Operations Management | Plano, TX +5 | <a href=\"https://ghr.wd1.myworkdayjobs.com/en-US/us-emplsv/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Plano, TX +5",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Bank of America - Client Quantitative Analyst I - Data Reporting and Operations Management|https://ghr.wd1.myworkdayjobs.com/en-US/lateral-us/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661",
+      "title": "Bank of America - Client Quantitative Analyst I - Data Reporting and Operations Management",
+      "url": "https://ghr.wd1.myworkdayjobs.com/en-US/lateral-us/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.bankofamerica.com\"><strong>Bank of America</strong></a> | Client Quantitative Analyst I - Data Reporting and Operations Management | Plano, TX +5 | <a href=\"https://ghr.wd1.myworkdayjobs.com/en-US/lateral-us/job/Plano/Client-Quantitative-Analyst-I---Data-Reporting-and-Operations-Management_26023661\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Plano, TX +5",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Citi - Markets - Quantitative Analysis - Full-Time Analyst - New York - USA - 2027|https://citi.wd5.myworkdayjobs.com/en-US/2/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
+      "title": "Citi - Markets - Quantitative Analysis - Full-Time Analyst - New York - USA - 2027",
+      "url": "https://citi.wd5.myworkdayjobs.com/en-US/2/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.citigroup.com\"><strong>Citi</strong></a> | Markets - Quantitative Analysis - Full-Time Analyst - New York - USA - 2027 | New York City, NY | <a href=\"https://citi.wd5.myworkdayjobs.com/en-US/2/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-17T19:15:18.730005",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY",
       "salary": null
     }
   ]
