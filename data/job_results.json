@@ -18171,6 +18171,20 @@
       "date_posted": null,
       "location": "New York City, NY",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Jobgether - Associate Engineer - Data Science|https://jobs.lever.co/jobgether/ab74bb6a-5a27-48df-a62a-f25117c72754",
+      "title": "Jobgether - Associate Engineer - Data Science",
+      "url": "https://jobs.lever.co/jobgether/ab74bb6a-5a27-48df-a62a-f25117c72754",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://jobgether.com/home\"><strong>Jobgether</strong></a> | Associate Engineer - Data Science | USA | <a href=\"https://jobs.lever.co/jobgether/ab74bb6a-5a27-48df-a62a-f25117c72754\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-18T19:09:43.239258",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA",
+      "salary": null
     }
   ]
 }
