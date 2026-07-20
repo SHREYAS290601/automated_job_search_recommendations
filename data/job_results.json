@@ -18185,6 +18185,76 @@
       "date_posted": null,
       "location": "USA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Research & Trading - 2027 Grads|https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050",
+      "title": "Hudson River Trading - Algorithm Developer - Quant Research & Trading - 2027 Grads",
+      "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.hudsonrivertrading.com\"><strong>Hudson River Trading</strong></a> | Algorithm Developer - Quant Research & Trading - 2027 Grads | London, United Kingdom +2 | $412k/yr | <a href=\"https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 6d |",
+      "added_at": "2026-07-20T19:46:45.190858",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "London, United Kingdom +2",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Research & Trading - 2027 PhDs|https://www.hudsonrivertrading.com/careers/job/?gh_jid=8059845",
+      "title": "Hudson River Trading - Algorithm Developer - Quant Research & Trading - 2027 PhDs",
+      "url": "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8059845",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.hudsonrivertrading.com\"><strong>Hudson River Trading</strong></a> | Algorithm Developer - Quant Research & Trading - 2027 PhDs | London, United Kingdom +2 | $412k/yr | <a href=\"https://www.hudsonrivertrading.com/careers/job/?gh_jid=8059845\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 6d |",
+      "added_at": "2026-07-20T19:46:45.190858",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "London, United Kingdom +2",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|PGTEK - Associate Cloud AI Engineer - TS/SCI clearance - Travel|https://apply.workable.com/pgtek/j/DB958E1A45/",
+      "title": "PGTEK - Associate Cloud AI Engineer - TS/SCI clearance - Travel",
+      "url": "https://apply.workable.com/pgtek/j/DB958E1A45/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.pgtek.com/\"><strong>PGTEK</strong></a> | Associate Cloud AI Engineer - TS/SCI clearance - Travel | Washington, DC +5 | <a href=\"https://apply.workable.com/pgtek/j/DB958E1A45/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-07-20T19:46:45.190858",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC +5",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|QTS Data Centers - AI Engineer I|https://qtsdatacenters.wd5.myworkdayjobs.com/en-US/qts/job/Suwanee-GA/AI-Engineer-I_R2026-1543",
+      "title": "QTS Data Centers - AI Engineer I",
+      "url": "https://qtsdatacenters.wd5.myworkdayjobs.com/en-US/qts/job/Suwanee-GA/AI-Engineer-I_R2026-1543",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://qtsdatacenters.com\"><strong>QTS Data Centers</strong></a> | AI Engineer I | Suwanee, GA | <a href=\"https://qtsdatacenters.wd5.myworkdayjobs.com/en-US/qts/job/Suwanee-GA/AI-Engineer-I_R2026-1543\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-07-20T19:46:45.190858",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Suwanee, GA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Texas Sports Academy Main - Junior Software Engineer - AI-Forward|https://apply.workable.com/texas-sports-academy-main/j/EE83780698/",
+      "title": "Texas Sports Academy Main - Junior Software Engineer - AI-Forward",
+      "url": "https://apply.workable.com/texas-sports-academy-main/j/EE83780698/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://texassportsacademy.com/\"><strong>Texas Sports Academy Main</strong></a> | Junior Software Engineer - AI-Forward | Austin, TX | <a href=\"https://apply.workable.com/texas-sports-academy-main/j/EE83780698/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 42d |",
+      "added_at": "2026-07-20T19:46:45.190858",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Austin, TX",
+      "salary": null
     }
   ]
 }
