@@ -18198,7 +18198,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "London, United Kingdom +2",
-      "salary": null
+      "salary": "$412k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Hudson River Trading - Algorithm Developer - Quant Research & Trading - 2027 PhDs|https://www.hudsonrivertrading.com/careers/job/?gh_jid=8059845",
@@ -18212,7 +18212,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "London, United Kingdom +2",
-      "salary": null
+      "salary": "$412k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|PGTEK - Associate Cloud AI Engineer - TS/SCI clearance - Travel|https://apply.workable.com/pgtek/j/DB958E1A45/",
@@ -18254,6 +18254,20 @@
       "age_days": null,
       "date_posted": null,
       "location": "Austin, TX",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Acorns - Data Analyst I|https://jobs.ashbyhq.com/acorns/89e8c629-36d6-48a3-9b64-0a48d290f36c",
+      "title": "Acorns - Data Analyst I",
+      "url": "https://jobs.ashbyhq.com/acorns/89e8c629-36d6-48a3-9b64-0a48d290f36c",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.acorns.com/\"><strong>Acorns</strong></a> | Data Analyst I | Remote | <a href=\"https://jobs.ashbyhq.com/acorns/89e8c629-36d6-48a3-9b64-0a48d290f36c\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-21T19:35:35.227396",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote",
       "salary": null
     }
   ]
