@@ -18269,6 +18269,62 @@
       "date_posted": null,
       "location": "Remote",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Boeing - DSP Algorithms Engineer - Entry-Level|https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239-1",
+      "title": "Boeing - DSP Algorithms Engineer - Entry-Level",
+      "url": "https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://boeing.com/\"><strong>Boeing</strong></a> | DSP Algorithms Engineer - Entry-Level | El Segundo, CA | <a href=\"https://boeing.wd1.myworkdayjobs.com/en-US/external_careers/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 14d |",
+      "added_at": "2026-07-22T19:25:45.594090",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "El Segundo, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Boeing - DSP Algorithms Engineer - Entry-Level|https://boeing.wd1.myworkdayjobs.com/en-US/external_subsidiary/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239",
+      "title": "Boeing - DSP Algorithms Engineer - Entry-Level",
+      "url": "https://boeing.wd1.myworkdayjobs.com/en-US/external_subsidiary/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://boeing.com/\"><strong>Boeing</strong></a> | DSP Algorithms Engineer - Entry-Level | USA +1 | <a href=\"https://boeing.wd1.myworkdayjobs.com/en-US/external_subsidiary/job/USA---El-Segundo-CA/Entry-Level-DSP-Algorithms-Engineer_JR2026512239\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 20d |",
+      "added_at": "2026-07-22T19:25:45.594090",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|CGS - HR Data Analytics & Reporting Specialist - HRDARS - Junior|https://jobs.lever.co/cgsfederal/4bab3e18-7cf6-4d4f-aa11-56db4e83e7ed",
+      "title": "CGS - HR Data Analytics & Reporting Specialist - HRDARS - Junior",
+      "url": "https://jobs.lever.co/cgsfederal/4bab3e18-7cf6-4d4f-aa11-56db4e83e7ed",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://cgsfederal.com/\"><strong>CGS</strong></a> | HR Data Analytics & Reporting Specialist - HRDARS - Junior | Washington, DC | <a href=\"https://jobs.lever.co/cgsfederal/4bab3e18-7cf6-4d4f-aa11-56db4e83e7ed\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 106d |",
+      "added_at": "2026-07-22T19:25:45.594090",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Travelers - Data Engineer I - Snowflake|https://travelers.wd5.myworkdayjobs.com/en-US/external/job/CT---Hartford/Data-Engineer-I--Snowflake-_R-49667",
+      "title": "Travelers - Data Engineer I - Snowflake",
+      "url": "https://travelers.wd5.myworkdayjobs.com/en-US/external/job/CT---Hartford/Data-Engineer-I--Snowflake-_R-49667",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.travelers.com\"><strong>Travelers</strong></a> | Data Engineer I - Snowflake | Saint Paul, MN | <a href=\"https://travelers.wd5.myworkdayjobs.com/en-US/external/job/CT---Hartford/Data-Engineer-I--Snowflake-_R-49667\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 119d |",
+      "added_at": "2026-07-22T19:25:45.594090",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Saint Paul, MN",
+      "salary": null
     }
   ]
 }
