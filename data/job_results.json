@@ -18829,6 +18829,48 @@
       "date_posted": null,
       "location": "Spring, TX",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Striim - Junior Solutions Architect - MLOps & Real-Time Data Integration|https://job-boards.greenhouse.io/striiminc/jobs/5196023007",
+      "title": "Striim - Junior Solutions Architect - MLOps & Real-Time Data Integration",
+      "url": "https://job-boards.greenhouse.io/striiminc/jobs/5196023007",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://striim.com\"><strong>Striim</strong></a> | Junior Solutions Architect - MLOps & Real-Time Data Integration | Remote - USA | <a href=\"https://job-boards.greenhouse.io/striiminc/jobs/5196023007\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-07-25T19:12:07.617559",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote - USA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|BlackRock - Portfolio Management Group Tech AI Engineer - Associate|https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/Atlanta-GA/Portfolio-Management-Group-Tech-AI-Engineer--Associate_R265434",
+      "title": "BlackRock - Portfolio Management Group Tech AI Engineer - Associate",
+      "url": "https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/Atlanta-GA/Portfolio-Management-Group-Tech-AI-Engineer--Associate_R265434",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.blackrock.com/\"><strong>BlackRock</strong></a> | Portfolio Management Group Tech AI Engineer - Associate | Atlanta, GA | <a href=\"https://blackrock.wd1.myworkdayjobs.com/en-US/blackrock_professional/job/Atlanta-GA/Portfolio-Management-Group-Tech-AI-Engineer--Associate_R265434\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-25T19:12:07.617559",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Atlanta, GA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Hewlett Packard Enterprise - Electrical Hardware Engineer - HPC/AI Platform Engineering - Early Career|https://hpe.wd5.myworkdayjobs.com/en-US/wfmathpe/job/Spring-Texas-United-States-of-America/Electrical-Hardware-Engineer---HPC-AI-Platform-Engineering---Early-Career_1208230-1",
+      "title": "Hewlett Packard Enterprise - Electrical Hardware Engineer - HPC/AI Platform Engineering - Early Career",
+      "url": "https://hpe.wd5.myworkdayjobs.com/en-US/wfmathpe/job/Spring-Texas-United-States-of-America/Electrical-Hardware-Engineer---HPC-AI-Platform-Engineering---Early-Career_1208230-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://hpe.com/\"><strong>Hewlett Packard Enterprise</strong></a> | Electrical Hardware Engineer - HPC/AI Platform Engineering - Early Career | Spring, TX | <a href=\"https://hpe.wd5.myworkdayjobs.com/en-US/wfmathpe/job/Spring-Texas-United-States-of-America/Electrical-Hardware-Engineer---HPC-AI-Platform-Engineering---Early-Career_1208230-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-07-25T19:12:07.617559",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Spring, TX",
+      "salary": null
     }
   ]
 }
