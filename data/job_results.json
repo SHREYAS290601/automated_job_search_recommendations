@@ -25954,7 +25954,7 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, IL",
-      "salary": null
+      "salary": "$191k/yr"
     },
     {
       "id": "2026-AI-College-Jobs|Bosch - Associate Vehicle Data Analyst|https://jobs.smartrecruiters.com/BoschGroup/744000143592222-associate-vehicle-data-analyst?oga=true",
@@ -26094,6 +26094,48 @@
       "age_days": null,
       "date_posted": null,
       "location": "Chicago, IL +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Astera Institute - Research Scientist - All-Optical Working Memory|https://jobs.ashbyhq.com/astera/600f1aad-2c27-4b82-bf6c-c171713bcd22",
+      "title": "Astera Institute - Research Scientist - All-Optical Working Memory",
+      "url": "https://jobs.ashbyhq.com/astera/600f1aad-2c27-4b82-bf6c-c171713bcd22",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://astera.org/\"><strong>Astera Institute</strong></a> | Research Scientist - All-Optical Working Memory | Emeryville, CA | <a href=\"https://jobs.ashbyhq.com/astera/600f1aad-2c27-4b82-bf6c-c171713bcd22\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-08-17T18:42:39.230687",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Emeryville, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Clera - Research Scientist / Research Engineer|https://jobs.ashbyhq.com/clera/5647b257-abc8-4d88-acd1-024f4ae982ab",
+      "title": "Clera - Research Scientist / Research Engineer",
+      "url": "https://jobs.ashbyhq.com/clera/5647b257-abc8-4d88-acd1-024f4ae982ab",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.getclera.com/\"><strong>Clera</strong></a> | Research Scientist / Research Engineer | San Francisco, CA | <a href=\"https://jobs.ashbyhq.com/clera/5647b257-abc8-4d88-acd1-024f4ae982ab\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-08-17T18:42:39.230687",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Francisco, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Bottomline Technologies - AI Enablement Analyst - Sales|https://job-boards.greenhouse.io/bottomlinetechnologies/jobs/8597355002",
+      "title": "Bottomline Technologies - AI Enablement Analyst - Sales",
+      "url": "https://job-boards.greenhouse.io/bottomlinetechnologies/jobs/8597355002",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"http://bottomline.com\"><strong>Bottomline Technologies</strong></a> | AI Enablement Analyst - Sales | Portsmouth, NH | <a href=\"https://job-boards.greenhouse.io/bottomlinetechnologies/jobs/8597355002\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 31d |",
+      "added_at": "2026-08-17T18:42:39.230687",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Portsmouth, NH",
       "salary": null
     }
   ]
