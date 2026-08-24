@@ -27243,6 +27243,62 @@
       "date_posted": null,
       "location": "Remote - San Francisco, CA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Lilly - Translational Data Scientist - Multi-Omics & Target Biology|https://lilly.wd115.myworkdayjobs.com/en-US/lly/job/US-Boston-MA/Translational-Data-Scientist--Multi-Omics---Target-Biology_R-110354",
+      "title": "Lilly - Translational Data Scientist - Multi-Omics & Target Biology",
+      "url": "https://lilly.wd115.myworkdayjobs.com/en-US/lly/job/US-Boston-MA/Translational-Data-Scientist--Multi-Omics---Target-Biology_R-110354",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.lilly.com\"><strong>Lilly</strong></a> | Translational Data Scientist - Multi-Omics & Target Biology | Boston, MA | <a href=\"https://lilly.wd115.myworkdayjobs.com/en-US/lly/job/US-Boston-MA/Translational-Data-Scientist--Multi-Omics---Target-Biology_R-110354\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-08-24T18:43:48.231186",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Boston, MA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Blackstone - 2027 Data Science Summer Analyst|https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/New-York/XMLNAME-2027-Data-Science-Summer-Analyst_44862",
+      "title": "Blackstone - 2027 Data Science Summer Analyst",
+      "url": "https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/New-York/XMLNAME-2027-Data-Science-Summer-Analyst_44862",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.blackstone.com\"><strong>Blackstone</strong></a> | 2027 Data Science Summer Analyst | New York City, NY | <a href=\"https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/New-York/XMLNAME-2027-Data-Science-Summer-Analyst_44862\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-08-24T18:43:48.231186",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Blackstone - 2027 Blackstone Data Engineer Summer Analyst|https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Miami/XMLNAME-2027-Blackstone-Technology-and-Innovations--Data-Engineer-Summer-Analyst_45022",
+      "title": "Blackstone - 2027 Blackstone Data Engineer Summer Analyst",
+      "url": "https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Miami/XMLNAME-2027-Blackstone-Technology-and-Innovations--Data-Engineer-Summer-Analyst_45022",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.blackstone.com\"><strong>Blackstone</strong></a> | 2027 Blackstone Data Engineer Summer Analyst | Miami, FL | <a href=\"https://blackstone.wd1.myworkdayjobs.com/en-US/blackstone_campus_careers/job/Miami/XMLNAME-2027-Blackstone-Technology-and-Innovations--Data-Engineer-Summer-Analyst_45022\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-08-24T18:43:48.231186",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Miami, FL",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Seeq - AI Customer Insights Engineer|https://apply.workable.com/seeq/j/6F40FF632B/",
+      "title": "Seeq - AI Customer Insights Engineer",
+      "url": "https://apply.workable.com/seeq/j/6F40FF632B/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://seeq.com\"><strong>Seeq</strong></a> | AI Customer Insights Engineer | USA | <a href=\"https://apply.workable.com/seeq/j/6F40FF632B/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 5d |",
+      "added_at": "2026-08-24T18:43:48.231186",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "USA",
+      "salary": null
     }
   ]
 }
