@@ -29945,6 +29945,76 @@
       "date_posted": null,
       "location": "Alameda, CA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|TikTok - Data Engineer Graduate - Data Platfrom TikTok BP - 2027 Start|https://lifeattiktok.com/search/7681779180341709109",
+      "title": "TikTok - Data Engineer Graduate - Data Platfrom TikTok BP - 2027 Start",
+      "url": "https://lifeattiktok.com/search/7681779180341709109",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.tiktok.com\"><strong>TikTok</strong></a> | Data Engineer Graduate - Data Platfrom TikTok BP - 2027 Start | San Jose, CA | $202k/yr | <a href=\"https://lifeattiktok.com/search/7681779180341709109\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-09-08T20:53:29.808378",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Jose, CA",
+      "salary": "$202k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|Bosch - AI/ML Engineer_MS|https://jobs.smartrecruiters.com/BoschGroup/744000147834699-ai-ml-engineer-ms?oga=true",
+      "title": "Bosch - AI/ML Engineer_MS",
+      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000147834699-ai-ml-engineer-ms?oga=true",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.bosch.com/\"><strong>Bosch</strong></a> | AI/ML Engineer_MS | Telengana, IN | <a href=\"https://jobs.smartrecruiters.com/BoschGroup/744000147834699-ai-ml-engineer-ms?oga=true\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-09-08T20:53:29.808378",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Telengana, IN",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Caterpillar - Data Scientist / Technical Analyst|https://cat.wd5.myworkdayjobs.com/en-US/caterpillarcareers/job/Chicago-Illinois/Data-Scientist---Technical-Analyst_R0000392872",
+      "title": "Caterpillar - Data Scientist / Technical Analyst",
+      "url": "https://cat.wd5.myworkdayjobs.com/en-US/caterpillarcareers/job/Chicago-Illinois/Data-Scientist---Technical-Analyst_R0000392872",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.caterpillar.com\"><strong>Caterpillar</strong></a> | Data Scientist / Technical Analyst | Chicago, IL +3 | <a href=\"https://cat.wd5.myworkdayjobs.com/en-US/caterpillarcareers/job/Chicago-Illinois/Data-Scientist---Technical-Analyst_R0000392872\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-09-08T20:53:29.808378",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Chicago, IL +3",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|University of Washington - Research Scientist/Engr 1|https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engr-1_REQ-0000131537",
+      "title": "University of Washington - Research Scientist/Engr 1",
+      "url": "https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engr-1_REQ-0000131537",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.washington.edu/\"><strong>University of Washington</strong></a> | Research Scientist/Engr 1 | Seattle, WA | <a href=\"https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engr-1_REQ-0000131537\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 75d |",
+      "added_at": "2026-09-08T20:53:29.808378",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Seattle, WA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|University of Washington - Research Scientist/Engineer 1|https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engineer-1_REQ-0000128046",
+      "title": "University of Washington - Research Scientist/Engineer 1",
+      "url": "https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engineer-1_REQ-0000128046",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.washington.edu/\"><strong>University of Washington</strong></a> | Research Scientist/Engineer 1 | Seattle, WA | <a href=\"https://wd5.myworkdaysite.com/en-US/recruiting/uw/uwhires/job/Seattle-WA/Research-Scientist-Engineer-1_REQ-0000128046\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 75d |",
+      "added_at": "2026-09-08T20:53:29.808378",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Seattle, WA",
+      "salary": null
     }
   ]
 }
