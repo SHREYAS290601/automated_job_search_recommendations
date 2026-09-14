@@ -30981,6 +30981,48 @@
       "date_posted": null,
       "location": "Boca Raton, FL",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Hewlett Packard Enterprise - AI and Machine Learning Engineering Graduate|https://hpe.wd5.myworkdayjobs.com/en-US/jobsathpe/job/Durham-North-Carolina-United-States-of-America/AI-and-Machine-Learning-Engineering-Graduate_1213475",
+      "title": "Hewlett Packard Enterprise - AI and Machine Learning Engineering Graduate",
+      "url": "https://hpe.wd5.myworkdayjobs.com/en-US/jobsathpe/job/Durham-North-Carolina-United-States-of-America/AI-and-Machine-Learning-Engineering-Graduate_1213475",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://hpe.com/\"><strong>Hewlett Packard Enterprise</strong></a> | AI and Machine Learning Engineering Graduate | Durham, NC | <a href=\"https://hpe.wd5.myworkdayjobs.com/en-US/jobsathpe/job/Durham-North-Carolina-United-States-of-America/AI-and-Machine-Learning-Engineering-Graduate_1213475\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-09-14T21:38:46.907370",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Durham, NC",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Flagstar Bank - Quantitative Financial Analyst II|https://flagstar.wd5.myworkdayjobs.com/en-US/flagstar/job/Work-From-Home-MI/Quantitative-Financial-Analyst-II_21334",
+      "title": "Flagstar Bank - Quantitative Financial Analyst II",
+      "url": "https://flagstar.wd5.myworkdayjobs.com/en-US/flagstar/job/Work-From-Home-MI/Quantitative-Financial-Analyst-II_21334",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.flagstar.com\"><strong>Flagstar Bank</strong></a> | Quantitative Financial Analyst II | Remote - USA | <a href=\"https://flagstar.wd5.myworkdayjobs.com/en-US/flagstar/job/Work-From-Home-MI/Quantitative-Financial-Analyst-II_21334\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-09-14T21:38:46.907370",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Remote - USA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Xcel Energy - Associate Data Scientist - Workforce Analytics|https://xcelenergy.wd1.myworkdayjobs.com/en-US/external/job/Minneapolis-MN-55401/Associate-Data-Scientist---Workforce-Analytics_JR116164-1",
+      "title": "Xcel Energy - Associate Data Scientist - Workforce Analytics",
+      "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/external/job/Minneapolis-MN-55401/Associate-Data-Scientist---Workforce-Analytics_JR116164-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://xcelenergy.com/\"><strong>Xcel Energy</strong></a> | Associate Data Scientist - Workforce Analytics | Minneapolis, MN +2 | <a href=\"https://xcelenergy.wd1.myworkdayjobs.com/en-US/external/job/Minneapolis-MN-55401/Associate-Data-Scientist---Workforce-Analytics_JR116164-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 3d |",
+      "added_at": "2026-09-14T21:38:46.907370",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Minneapolis, MN +2",
+      "salary": null
     }
   ]
 }
