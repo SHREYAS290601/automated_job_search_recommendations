@@ -32171,6 +32171,20 @@
       "date_posted": null,
       "location": "Seattle, WA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Becoming - Research Scientist - Dynamical Systems & AI|https://apply.workable.com/becoming/j/864061C72B/",
+      "title": "Becoming - Research Scientist - Dynamical Systems & AI",
+      "url": "https://apply.workable.com/becoming/j/864061C72B/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.becoming.ai/\"><strong>Becoming</strong></a> | Research Scientist - Dynamical Systems & AI | San Francisco, CA | <a href=\"https://apply.workable.com/becoming/j/864061C72B/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 31d |",
+      "added_at": "2026-09-21T21:49:28.695180",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Francisco, CA",
+      "salary": null
     }
   ]
 }
