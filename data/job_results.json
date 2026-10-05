@@ -34733,6 +34733,76 @@
       "date_posted": null,
       "location": "Lake Buena Vista, FL",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Coherent Solutions - ML Engineer|https://job-boards.eu.greenhouse.io/coherentsolutions/jobs/4975295101",
+      "title": "Coherent Solutions - ML Engineer",
+      "url": "https://job-boards.eu.greenhouse.io/coherentsolutions/jobs/4975295101",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://coherentsolutions.lt\"><strong>Coherent Solutions</strong></a> | ML Engineer | Georgia, USA +1 | <a href=\"https://job-boards.eu.greenhouse.io/coherentsolutions/jobs/4975295101\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-05T23:52:44.121924",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Georgia, USA +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|NIH-NCBI - Junior Data Scientist|https://job-boards.greenhouse.io/blackcanyonconsulting/jobs/8012994003",
+      "title": "NIH-NCBI - Junior Data Scientist",
+      "url": "https://job-boards.greenhouse.io/blackcanyonconsulting/jobs/8012994003",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.ncbi.nlm.nih.gov\"><strong>NIH-NCBI</strong></a> | Junior Data Scientist | Bethesda, MD | <a href=\"https://job-boards.greenhouse.io/blackcanyonconsulting/jobs/8012994003\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-05T23:52:44.121924",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Bethesda, MD",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Peraton - Data Analyst|https://careers-peraton.icims.com/jobs/171560/data-analyst/job",
+      "title": "Peraton - Data Analyst",
+      "url": "https://careers-peraton.icims.com/jobs/171560/data-analyst/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.peraton.com\"><strong>Peraton</strong></a> | Data Analyst | Washington, DC +1 | <a href=\"https://careers-peraton.icims.com/jobs/171560/data-analyst/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-05T23:52:44.121924",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC +1",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Vanderbilt University Medical Center - Data Engineer / Platform Administrator - Azure Databricks|https://vumc.wd1.myworkdayjobs.com/en-US/vumccareers/job/Nashville-TN/Data-Engineer---Platform-Administrator--Azure-Databricks-_R-69089",
+      "title": "Vanderbilt University Medical Center - Data Engineer / Platform Administrator - Azure Databricks",
+      "url": "https://vumc.wd1.myworkdayjobs.com/en-US/vumccareers/job/Nashville-TN/Data-Engineer---Platform-Administrator--Azure-Databricks-_R-69089",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.vumc.org\"><strong>Vanderbilt University Medical Center</strong></a> | Data Engineer / Platform Administrator - Azure Databricks | Nashville, TN | <a href=\"https://vumc.wd1.myworkdayjobs.com/en-US/vumccareers/job/Nashville-TN/Data-Engineer---Platform-Administrator--Azure-Databricks-_R-69089\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-05T23:52:44.121924",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Nashville, TN",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Directors Investment Group - Data Analyst|https://funeraldirectorslifeinsurancecompany.applytojob.com/apply/tllnE4Dmtz/Data-Analyst",
+      "title": "Directors Investment Group - Data Analyst",
+      "url": "https://funeraldirectorslifeinsurancecompany.applytojob.com/apply/tllnE4Dmtz/Data-Analyst",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.dig.family/\"><strong>Directors Investment Group</strong></a> | Data Analyst | Abilene, TX | <a href=\"https://funeraldirectorslifeinsurancecompany.applytojob.com/apply/tllnE4Dmtz/Data-Analyst\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 13d |",
+      "added_at": "2026-10-05T23:52:44.121924",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Abilene, TX",
+      "salary": null
     }
   ]
 }
