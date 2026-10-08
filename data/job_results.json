@@ -35195,6 +35195,62 @@
       "date_posted": null,
       "location": "Austin, TX",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|TikTok - Machine Learning Engineer Graduate - E-Commerce Knowledge Graph - 2027 Start|https://lifeattiktok.com/search/7694054165508557109",
+      "title": "TikTok - Machine Learning Engineer Graduate - E-Commerce Knowledge Graph - 2027 Start",
+      "url": "https://lifeattiktok.com/search/7694054165508557109",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.tiktok.com\"><strong>TikTok</strong></a> | Machine Learning Engineer Graduate - E-Commerce Knowledge Graph - 2027 Start | Seattle, WA | $202k/yr | <a href=\"https://lifeattiktok.com/search/7694054165508557109\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-08T23:05:22.303778",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Seattle, WA",
+      "salary": "$202k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|Microsoft - Research Scientist - Economist|https://apply.careers.microsoft.com/careers/job/1970393557024073",
+      "title": "Microsoft - Research Scientist - Economist",
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393557024073",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.microsoft.com\"><strong>Microsoft</strong></a> | Research Scientist - Economist | Washington, DC +1 | $168k/yr | <a href=\"https://apply.careers.microsoft.com/careers/job/1970393557024073\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-10-08T23:05:22.303778",
+      "resume_suggestion": null,
+      "is_faang": true,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC +1",
+      "salary": "$168k/yr"
+    },
+    {
+      "id": "2026-AI-College-Jobs|Automobile Club of Southern California - Associate Data Engineer|https://ace.wd5.myworkdayjobs.com/en-US/careers/job/Costa-Mesa-CA/Associate-Data-Engineer_JR202639452",
+      "title": "Automobile Club of Southern California - Associate Data Engineer",
+      "url": "https://ace.wd5.myworkdayjobs.com/en-US/careers/job/Costa-Mesa-CA/Associate-Data-Engineer_JR202639452",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.ace.aaa.com/\"><strong>Automobile Club of Southern California</strong></a> | Associate Data Engineer | Costa Mesa, CA | <a href=\"https://ace.wd5.myworkdayjobs.com/en-US/careers/job/Costa-Mesa-CA/Associate-Data-Engineer_JR202639452\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-10-08T23:05:22.303778",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Costa Mesa, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|OPEN Data Jobs - Junior Data Engineer - SQL|https://apply.workable.com/opendatajobs/j/3E1192A290/",
+      "title": "OPEN Data Jobs - Junior Data Engineer - SQL",
+      "url": "https://apply.workable.com/opendatajobs/j/3E1192A290/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.opendatajobs.com/\"><strong>OPEN Data Jobs</strong></a> | Junior Data Engineer - SQL | Washington, DC | <a href=\"https://apply.workable.com/opendatajobs/j/3E1192A290/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-10-08T23:05:22.303778",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Washington, DC",
+      "salary": null
     }
   ]
 }
