@@ -35797,6 +35797,20 @@
       "date_posted": null,
       "location": "Los Angeles, CA",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Becoming - Applied AI Engineer|https://apply.workable.com/becoming/j/15A6DEBBF1/",
+      "title": "Becoming - Applied AI Engineer",
+      "url": "https://apply.workable.com/becoming/j/15A6DEBBF1/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.becoming.ai/\"><strong>Becoming</strong></a> | Applied AI Engineer | San Francisco, CA | <a href=\"https://apply.workable.com/becoming/j/15A6DEBBF1/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-10-13T00:20:01.109988",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Francisco, CA",
+      "salary": null
     }
   ]
 }
