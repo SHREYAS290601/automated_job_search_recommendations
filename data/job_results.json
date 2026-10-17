@@ -37323,6 +37323,20 @@
       "date_posted": null,
       "location": "Oklahoma City, OK",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|KLA - Research Scientist: Computational Physics|https://kla.wd1.myworkdayjobs.com/en-US/annarbor/job/Ann-Arbor-MI/Research-Scientist--Computational-Physics_2642067-1",
+      "title": "KLA - Research Scientist: Computational Physics",
+      "url": "https://kla.wd1.myworkdayjobs.com/en-US/annarbor/job/Ann-Arbor-MI/Research-Scientist--Computational-Physics_2642067-1",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.kla.com\"><strong>KLA</strong></a> | Research Scientist: Computational Physics | Ann Arbor, MI | <a href=\"https://kla.wd1.myworkdayjobs.com/en-US/annarbor/job/Ann-Arbor-MI/Research-Scientist--Computational-Physics_2642067-1\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 4d |",
+      "added_at": "2026-10-17T20:18:53.518149",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Ann Arbor, MI",
+      "salary": null
     }
   ]
 }
