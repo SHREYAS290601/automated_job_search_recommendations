@@ -38765,6 +38765,48 @@
       "date_posted": null,
       "location": "Moscow, ID",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|U.S. Bank - Data Scientist - Multiple openings in Cupertino - CA.|https://usbank.wd1.myworkdayjobs.com/en-US/us_bank_careers/job/Cupertino-CA/Data-Scientist--Multiple-openings--in-Cupertino--CA_2026-0033084",
+      "title": "U.S. Bank - Data Scientist - Multiple openings in Cupertino - CA.",
+      "url": "https://usbank.wd1.myworkdayjobs.com/en-US/us_bank_careers/job/Cupertino-CA/Data-Scientist--Multiple-openings--in-Cupertino--CA_2026-0033084",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.usbank.com\"><strong>U.S. Bank</strong></a> | Data Scientist - Multiple openings in Cupertino - CA. | Cupertino, CA | <a href=\"https://usbank.wd1.myworkdayjobs.com/en-US/us_bank_careers/job/Cupertino-CA/Data-Scientist--Multiple-openings--in-Cupertino--CA_2026-0033084\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 0d |",
+      "added_at": "2026-10-26T22:26:04.488789",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Cupertino, CA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Thorlabs - Data Analyst I|https://apply.workable.com/thorlabs/j/B3CD05F790/",
+      "title": "Thorlabs - Data Analyst I",
+      "url": "https://apply.workable.com/thorlabs/j/B3CD05F790/",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.thorlabs.com/\"><strong>Thorlabs</strong></a> | Data Analyst I | Newton, NJ | <a href=\"https://apply.workable.com/thorlabs/j/B3CD05F790/\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 5d |",
+      "added_at": "2026-10-26T22:26:04.488789",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "Newton, NJ",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Nimble - Outbound AI Engineer|https://www.nimbleway.com/open-position?outbound-ai-engineer&uid=54.270&page=2",
+      "title": "Nimble - Outbound AI Engineer",
+      "url": "https://www.nimbleway.com/open-position?outbound-ai-engineer&uid=54.270&page=2",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nimbleway.com\"><strong>Nimble</strong></a> | Outbound AI Engineer | New York City, NY | <a href=\"https://www.nimbleway.com/open-position?outbound-ai-engineer&uid=54.270&page=2\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 12d |",
+      "added_at": "2026-10-26T22:26:04.488789",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "New York City, NY",
+      "salary": null
     }
   ]
 }
