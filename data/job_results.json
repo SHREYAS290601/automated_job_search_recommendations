@@ -40137,6 +40137,48 @@
       "date_posted": null,
       "location": "New York City, NY",
       "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Steampunk - Data Analyst|https://careers-steampunk.icims.com/jobs/6372/data-analyst/job",
+      "title": "Steampunk - Data Analyst",
+      "url": "https://careers-steampunk.icims.com/jobs/6372/data-analyst/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://steampunk.com\"><strong>Steampunk</strong></a> | Data Analyst | McLean, VA | <a href=\"https://careers-steampunk.icims.com/jobs/6372/data-analyst/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-11-03T00:44:12.076039",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "McLean, VA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Steampunk - Associate Data Scientist|https://careers-steampunk.icims.com/jobs/5916/associate-data-scientist/job",
+      "title": "Steampunk - Associate Data Scientist",
+      "url": "https://careers-steampunk.icims.com/jobs/5916/associate-data-scientist/job",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://steampunk.com\"><strong>Steampunk</strong></a> | Associate Data Scientist | McLean, VA | <a href=\"https://careers-steampunk.icims.com/jobs/5916/associate-data-scientist/job\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 1d |",
+      "added_at": "2026-11-03T00:44:12.076039",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "McLean, VA",
+      "salary": null
+    },
+    {
+      "id": "2026-AI-College-Jobs|Nimble - Outbound AI Engineer|https://www.nimbleway.com/open-position?outbound-ai-engineer=&uid=87.479",
+      "title": "Nimble - Outbound AI Engineer",
+      "url": "https://www.nimbleway.com/open-position?outbound-ai-engineer=&uid=87.479",
+      "source_repo": "2026-AI-College-Jobs",
+      "raw_line": "| <a href=\"https://www.nimbleway.com\"><strong>Nimble</strong></a> | Outbound AI Engineer | San Francisco, CA | <a href=\"https://www.nimbleway.com/open-position?outbound-ai-engineer=&uid=87.479\"><img src=\"https://i.imgur.com/JpkfjIq.png\" alt=\"Apply\" width=\"70\"/></a> | 6d |",
+      "added_at": "2026-11-03T00:44:12.076039",
+      "resume_suggestion": null,
+      "is_faang": false,
+      "age_days": null,
+      "date_posted": null,
+      "location": "San Francisco, CA",
+      "salary": null
     }
   ]
 }
